@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="body">
+      <view class="flex-wrp">
+        <view class="flex-item">
+          <view class="flex-item-inside ">当前积分</view>
+          <view class="flex-item-inside"><view class="mark">{{score}}</view>分</view>
+        </view>
+        <navigator url="integralRecord/index?uid={{uid}}&carId={{carId}}&accessToken={{accessToken}}">
+          <view class="flex-item explain">查看积分记录</view>
+        </navigator>
+      </view>
+      <view class="flex-item-line"></view>
+      <view wx:for="{{array}}" wx:key="id">
+        <view class="flex-wrp flex-wrp-list">
+          <view class="flex-item">
+            <view class="flex-item-inside content">{{item.name}}</view>
+            <view class="flex-item-inside content-explain">{{item.rule}}</view>
+          </view>
+          <view class="flex-item number" style="{{item.status == '1'?'background: #AAAAAA;':''}}">+{{item.score}}分</view>
+        </view>
+      </view>
+  </view>
+</view>

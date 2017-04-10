@@ -1,0 +1,82 @@
+<view class="body">
+    <view class="car-info">
+        <image mode="aspectFit" src="/image/moofun/{{car[0].vehicleType}}.png"></image>
+        <view class="car-info-detail">
+            <view class="car-type">
+                <text style="margin-right:20rpx;">海马{{car[num].vehicleType}}</text>
+                <text>{{car[num].plateNo}}</text>
+            </view>
+            <view class="repair-number">
+                <text hidden="{{flag1}}">维保次数： {{amount}}次</text>
+                <text hidden="{{flag}}">预约次数： {{orderAmount}}次</text>
+            </view>
+        </view>
+    </view>
+    <view>
+    </view>
+    <view class="choose-info">
+        <view class="{{classone}}" bindtap="showOrder"><text>预约记录</text></view>
+        <view class="{{classtwo}}" bindtap="showRepair"><text>维保记录</text></view>
+    </view>
+    <scroll-view class="widgets" style="padding-bottom:40rpx;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+        <view class="order-info" wx:for="{{orderList}}" wx:key="id" hidden="{{flag}}">
+            <view class="no-record" wx:if="{{orderAmount == '0'}}">
+                <image src="/image/moofun/feedback.png"></image>
+                <text>您当前没有预约记录哦，快点去给爱车来个大保健吧~</text>
+            </view>
+            <view class="time">
+                <view class="img">
+                    <image src="/image/page/wei.png" wx:if="{{item.order_type == '1'|| item.order_type =='3'}}"></image>
+                    <image src="/image/page/weibao.png" wx:if="{{item.order_type == '2'||item.order_type == '3'}}"></image>
+                </view>
+                <view class="repair-time">
+                    <text>{{item.create_time}}</text>
+                </view>
+            </view>
+            <view class="store-address">
+                <view class="store-name"><text>{{item.dealer_info.cn_fullname}}</text></view>
+                <view class="address-detail">
+                    <text class="address-title" style="width: 100rpx;">地址:</text>
+                    <text class="address-content" style="margin-left:-16rpx;">{{item.dealer_info.address}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="repair-info" wx:for="{{list}}" wx:key="id" hidden="{{flag1}}">
+            <view class="no-record" wx:if="{{amount == '0'}}">
+                <image mode="aspectFit" src="/image/moofun/feedback.png"></image>
+                <text>您当前没有维保记录哦，快点去给爱车来个大保健吧~</text>
+            </view>
+            <view class="time">
+                <view class="img">
+                    <view wx:if="{{item.fixed}}"><image src="/image/page/wei.png"></image></view>
+                    <view wx:if="{{item.maintain}}"><image src="/image/page/weibao.png"></image></view>
+                    <view wx:if="{{item.claim}}"><image src="/image/page/weipei.png"></image></view>
+                    <view wx:if="{{item.insurance}}"><image src="/image/page/weixian.png"></image></view>
+                </view>
+                <view class="repair-time">
+                    <text>{{item.outdate}}</text>
+                </view>
+            </view>
+            <view class="price">
+                <view class="total-course">
+                    <text style="font-weight:bold;font-size:16px;">总里程数： {{item.mileage}}KM</text>
+                </view>
+                <view class="shop">
+                    <text class="shop-name" style="font-size:14px;">{{item.cn_fullname}}</text>
+                    <text class="shop-price" style="font-size:22px;">￥{{item.money}}</text>
+                </view>
+                <view class="content">
+                    <view class="content-item1">
+                        <text>内容：</text>
+                    </view>
+                    <view class="content-item2">
+                        <text style="font-weight: bold;">{{item.rep_items}}</text>
+                    </view>
+                    <!--<view id="{{item.id}}" data-hi="{{item.mileage}}" class="content-item3" bindtap="showtype">
+                        <image src="{{url}}"></image>
+                    </view>-->
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

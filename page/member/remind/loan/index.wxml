@@ -1,0 +1,36 @@
+<view class="body">
+    <view class="set">
+        <text>车贷提醒：</text>
+        <switch bindchange="switchChange" checked="{{status}}" color="#FF9801"/>
+    </view>
+    <view class="set-detail">
+        <view class="set-detail-content">
+            <text>还款金额:</text>
+            <view class="time">
+                <input type="text" value="{{amount}}" bindblur="changeAmount" />元
+            </view>
+        </view>
+        <view class="set-detail-content">
+            <text>还款日期:</text>
+            <picker bindchange="changeRepaymentDate" value="{{repaymentDate}}" range="{{repaymentDateArr}}">
+                <view class="time">
+                    <text class="left">{{repaymentDateArr[repaymentDate]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content last">
+            <text>提醒日期:</text>
+            <picker bindchange="changeRemindDays" value="{{remindDays}}" range="{{remindDayArr}}">
+                <view class="time">
+                    <text class="left">{{remindDayArr[remindDays]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="footer">
+    <text>开启提醒，享受便捷车联网生活</text>
+    <button bindtap="submitRemind">完成</button>
+</view>

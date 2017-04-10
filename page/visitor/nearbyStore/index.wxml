@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="body">
+    <!--<view class="body-top">
+           <view class="choose-city">
+              <view>上海</view>
+              <image src="/image/arrowwhite.png" style="width:30rpx;height:20rpx;margin-left: 12rpx" bindtap="selectCities"></image>
+           </view>
+           <view class="search-city" >
+              <image src="/image/search-icon.png" style="width:24rpx;height:24rpx;margin-left:20rpx;"></image>
+              <input type="text" placeholder="快速搜索海马经销商" style="height:60%; border-radius:40rpx;" class="input"/>
+           </view>
+    </view>-->
+    <view class="sort">
+      <view class="sort-button">
+        <button class="{{order == 0?'selected':''}}" bindtap="distance">离我最近</button>
+      </view>
+      <view class="sort-button">
+        <button class="{{order == 1?'selected':''}}" bindtap="amount">人气最高</button>
+      </view>
+      <view class="sort-button">
+        <button class="{{order == 2?'selected':''}}" bindtap="comment">评价最好</button>
+      </view>
+    </view>
+    
+    <scroll-view class="widgets" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+      <view wx:for="{{list}}" wx:key="dealer_id">
+        <navigator class="widget" url="storeDetail/index?dealer_id={{item.dealer_id}}&location={{location}}">
+          <image class="widget_icon" src="/image/page/store.png"></image>
+          <image wx:if="{{item.buyCar}}" class="buyCar" mode="aspectFit" src="/image/page/buyCar.png"></image>
+          <view class="widget_info">
+            <view class="name">
+              <text>{{item.cn_fullname}}</text>
+              <view class="km">
+                <text>{{item.distance}}</text>
+              </view>
+            </view>
+            <view class="imgList">
+              <image mode="aspectFit" src="{{item.avg}}"></image> <text wx:if="{{item.support_pick}}" class="blue">上门取车</text> <text wx:if="{{item.gone}}" class="orange">上次去过的店</text> <text class="order_num">{{item.order_num}}单</text>
+            </view>
+            <text class="address">{{item.address}}</text>
+          </view>
+          <view class="widget__line"></view>
+        </navigator>
+      </view>
+    </scroll-view > 
+  </view>
+</view>

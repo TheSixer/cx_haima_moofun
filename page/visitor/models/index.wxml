@@ -1,0 +1,56 @@
+<view class="page">
+  <view class="page__bd page_size">
+    <view class="section section_gap">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <view class="scroll-view-item_H">
+          <view class="flex-wrp">
+            <view class="flex-item flex-item-top">
+              <image mode="aspectFit" src="/image/moofun/M6.png"></image>
+            </view>
+            <view class="flex-item flex-item-bottom">
+              <view class="item-body">
+                <text class="carName">海马M6</text>
+                <text class="price">参考价格6.98万-10.28万</text>
+                <!--<text class="detail">详细参考查看 ></text>-->
+                <!--<button type="default" size="default"  bindtap="testDriveM6"> 预约试驾 </button>-->
+                <button type="default" size="default"  bindtap="testDriveM6"> 查看详情 </button>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="scroll-view-item_H">
+          <view class="flex-wrp">
+            <view class="flex-item flex-item-top">
+              <image mode="aspectFit" src="/image/moofun/S5.png"></image>
+            </view>
+            <view class="flex-item flex-item-bottom">
+              <view class="item-body">
+                <text class="carName">海马S5</text>
+                <text class="price">参考价格7.98万-11.68万</text>
+                <!--<text class="detail">详细参考查看 ></text>-->
+                <!--<button type="default" size="default"  bindtap="testDriveS5"> 预约试驾 </button>-->
+                <button type="default" size="default"  bindtap="testDriveS5"> 查看详情 </button>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="scroll-view-item_H">
+          <view class="flex-wrp">
+            <view class="flex-item flex-item-top">
+              <image mode="aspectFit" src="/image/moofun/M3.png"></image>
+            </view>
+            <view class="flex-item flex-item-bottom">
+              <view class="item-body">
+                <text class="carName">海马M3</text>
+                <text class="price">参考价格5.58万-8.18万</text>
+                <!--<text class="detail">详细参考查看 ></text>-->
+                <!--<button type="default" size="default"  bindtap="testDriveM3"> 预约试驾 </button>-->
+                <button type="default" size="default"  bindtap="testDriveM3"> 查看详情 </button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

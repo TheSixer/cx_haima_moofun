@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="body">
+    <view class="call" bindtap="callingOne">
+      <text class="name">车联网服务中心</text>
+      <text class="phone">客服热线：400-895-2000</text>
+      <image src="/image/page/call.png"></image>
+    </view>
+    <view class="call" bindtap="callingTwo">
+      <text class="name">海马汽车客服热线</text>
+      <text class="phone">客服热线：400-045-9898</text>
+      <image src="/image/page/call.png"></image>
+    </view>
+  </view>
+</view>

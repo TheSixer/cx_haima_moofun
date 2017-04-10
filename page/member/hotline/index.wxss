@@ -1,0 +1,31 @@
+.body {
+    height: 100%;
+    width: 100%;
+}
+.call {
+    position: relative;
+    display: flex;
+    height: 60px;
+    background: #fff;
+    margin-bottom: 30rpx;
+    padding: 40rpx 150rpx 40rpx 40rpx;
+    flex-direction:column;
+}
+.name {
+    font-size:18px;
+    font-weight:bold;
+    color:#000;
+    margin-top: 10rpx;
+    margin-bottom:15rpx;
+}
+.phone {
+    font-size: 14px;
+    color: #FF9801;
+}
+.call image {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 30px;
+    right: 20px;
+}

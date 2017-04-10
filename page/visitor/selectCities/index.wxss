@@ -1,0 +1,28 @@
+.location {
+    padding:30rpx 30rpx 0;
+}
+.btnGroup {
+    display: flex;
+    padding:10rpx 0;
+}
+.flex {
+    display:flex;
+    width:33.33333%;
+}
+.flex button {
+    height:80rpx;
+    width:80%;
+    margin: 0;
+    line-height:80rpx;
+    font-size:28rpx;
+}
+.list {
+    margin: 30rpx 0;
+    /*padding:0 30rpx;*/
+    background-color:#FFFFFF;
+}
+.li {
+    padding: 20rpx 30rpx;
+    background-color: #FFFFFF;
+    border-bottom: 2rpx solid #DDD;
+}

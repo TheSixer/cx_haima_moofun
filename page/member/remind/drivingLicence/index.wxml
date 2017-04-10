@@ -1,0 +1,51 @@
+<view class="body">
+    <view class="set">
+        <text>行驶证提醒：</text>
+        <switch bindchange="switchChange" checked="{{status}}" color="#FF9801"/>
+    </view>
+    <view class="set-detail">
+        <view class="set-detail-content">
+            <text>发动机号码:</text>
+            <view class="time">
+                <text>{{engine}}</text>
+            </view>
+        </view>
+        <view class="set-detail-content">
+            <text>车辆识别码:</text>
+            <view class="time">
+                <text>{{vin}}</text>
+            </view>
+        </view>
+        <view class="set-detail-content">
+            <text>发证日期:</text>
+            <picker mode="date" value="{{cardDate}}" start="1990-01-01" end="2210-09-01" bindchange="cardDateChange">
+                <view class="time">
+                    <text class="left">{{cardDate}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content">
+            <text>检验有效期至:</text>
+            <picker mode="date" value="{{effectiveDate}}" start="{{today}}" end="2210-09-01" bindchange="effectiveDateChange">
+                <view class="time">
+                    <text class="left">{{effectiveDate}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content last">
+            <text>提醒时间:</text>
+            <picker bindchange="changeRemindDays" value="{{remindDays}}" range="{{remindDayArr}}">
+                <view class="time">
+                    <text class="left">{{remindDayArr[remindDays]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="footer">
+    <text>开启提醒，享受便捷车联网生活</text>
+    <button bindtap="submitRemind">完成</button>
+</view>

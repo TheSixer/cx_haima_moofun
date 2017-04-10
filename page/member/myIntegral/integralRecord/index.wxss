@@ -1,0 +1,28 @@
+/* page/member/myIntegral/integralRecord/index.wxss */
+.title{
+    padding: 20rpx 30rpx;
+    color: #B0B0B0;
+}
+.content{
+    padding: 0 30rpx;
+    background-color: #ffffff;
+}
+.content .content-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #ECECEC;
+}
+.content .content-detail .get-type text{
+    display: block;
+    margin-top: 10rpx;
+}
+.content .content-detail .get-score{
+    color: #F6A623;
+}
+.empty {
+    padding:30rpx 0;
+    text-align:center;
+    color:#999;
+}

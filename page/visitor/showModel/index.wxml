@@ -1,0 +1,3 @@
+<view class="page">
+    <image mode="widthFix" src="https://haimaxiaochengxu.oss-cn-beijing.aliyuncs.com/{{src}}.jpg"></image>
+</view>

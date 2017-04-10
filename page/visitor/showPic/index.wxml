@@ -1,0 +1,3 @@
+<view class="page" style="background:rgba(0, 0, 0, 0.76);">
+    <image mode="aspectFit" src="{{src}}"></image>
+</view>

@@ -1,0 +1,36 @@
+<view class="body">
+    <view class="set">
+        <text>保养提醒：</text>
+        <switch bindchange="switchChange" checked="{{status}}" color="#FF9801"/>
+    </view>
+    <view class="set-detail">
+        <view class="set-detail-content">
+            <text>剩余公里数:</text>
+            <picker bindchange="changeRemindMileage" value="{{remindMileage}}" range="{{remindMileageArr}}">
+                <view class="time">
+                    <text class="left">{{remindMileageArr[remindMileage]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content last">
+            <text>提醒日期:</text>
+            <picker bindchange="changeRemindDays" value="{{remindDays}}" range="{{remindDayArr}}">
+                <view class="time">
+                    <text class="left">{{remindDayArr[remindDays]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="tips" hidden="{{_maintain}}">
+            <text class="tips-left">温馨提示：</text>
+            <view>
+                <text class="tips-right">用车较少的车主可着重关注时间</text>
+                <text class="tips-right">用车较多的车主可着重关注剩余公里数</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="footer">
+    <button bindtap="submitRemind">完成</button>
+</view>

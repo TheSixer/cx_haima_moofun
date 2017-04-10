@@ -1,0 +1,65 @@
+<view class="container">
+    <view class="storeHeader">
+        <view class="info" url="storeDetail/index">
+            <view class="storeImg" bindtap="showPic">
+                <image class="storePic" src="/image/page/store.png"></image>
+                <image wx:if="{{info.buyCar}}" class="buyCar" mode="aspectFit" src="/image/page/buyCar.png"></image>
+                <!--<view class="bigImg">查看大图</view>-->
+            </view>
+            <view class="store">
+                <view class="name">
+                    <text>{{info.cn_fullname}}</text>
+                </view>
+                <view class="imgList">
+                    <image mode="aspectFit" src="{{info.avg}}"></image> <text wx:if="{{info.support_pick}}" class="blue">上门取车</text> <text wx:if="{{info.gone}}" class="orange">上次去过的店</text>
+                </view>
+                <text class="address">{{info.order_num}}单 | 17.12km</text>
+            </view>
+        </view>
+        <view class="connect">
+            <view class="call" bindtap="call">
+                <image src="/image/call.png"></image>
+            </view>
+            <view class="location">
+                <text>{{info.address}}</text>
+                <!--<image src="/image/location.png"></image>-->
+            </view>
+        </view>
+    </view>
+
+    <view class="flex-wrp">
+        <view class="flex-item" bindtap="showMap">
+            <view class="flex-center {{chooseOne}}" style="border-right:1xp solid #ddd;">店铺地图</view>
+        </view>
+        <view class="flex-item" bindtap="showComments">
+            <view class="flex-center {{chooseTwo}}">车友评价</view>
+        </view>
+    </view>
+    
+    <view class="detail">
+        <view class="comment" hidden="{{commentsOpacity}}">
+            <scroll-view wx:if="{{hasComments}}" class="widgets" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+                <view class="cmt" wx:for="{{comments}}" wx:key="id">
+                    <image class="user-head" src="{{item.head_photo.middleUrl}}"></image>
+                    <view class="nickname">
+                        <text>{{item.nick_name}}</text>
+                        <image src="/image/page/star.png"></image>
+                    </view>
+                    <text class="date">{{item.review_time}}</text>
+                    <text class="cmt-content">{{item.comment}}</text>
+                </view>
+            </scroll-view>
+            <view wx:if="{{!hasComments}}" class="noCmt">暂无用户评论！</view>
+        </view>
+    </view>
+
+  <view class="page-body" hidden="{{mapOpacity}}">
+    <view class="page-section page-section-gap">
+      <map style="width: 100%; height: 580rpx;" markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}"></map>
+    </view>
+  </view>
+
+    <view class="order">
+        <button bindtap="order">立即预约</button>
+    </view>
+</view>

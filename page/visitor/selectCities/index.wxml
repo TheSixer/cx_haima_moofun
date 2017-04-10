@@ -1,0 +1,1197 @@
+<view class="page">
+    <view class="container">
+        <view class="location">
+            <text>当前定位城市</text>
+            <view class="btnGroup">
+                <view class="flex"><button bindtap="here" loading="{{!city.city}}">{{city.city}}</button></view>
+                <!--<view class="flex"><button>全国</button></view>-->
+                <view class="flex"></view>
+            </view>
+        </view>
+        <view class="location">
+            <text>热门城市</text>
+            <view class="btnGroup">
+                <view class="flex"><button data-hi="北京" id="555" bindtap="getCity">北京</button></view>
+                <view class="flex"><button data-hi="上海" id="556" bindtap="getCity">上海</button></view>
+                <view class="flex"><button data-hi="广州" id="129" bindtap="getCity">广州</button></view>
+            </view>
+            <view class="btnGroup">
+                <view class="flex"><button data-hi="郑州" id="230" bindtap="getCity">郑州</button></view>
+                <view class="flex"><button data-hi="济南" id="374" bindtap="getCity">济南</button></view>
+                <view class="flex"><button data-hi="成都" id="418" bindtap="getCity">成都</button></view>
+            </view>
+        </view>
+        <!--<view class="list">
+            <view  wx:for="{{list}}" wx:key="cid" >
+                <view id="{{item.cid}}" data-hi="{{item.name}}" class="li" style="{{item.name === 'A'||item.name === 'B'||item.name === 'C'||item.name === 'D'||item.name === 'E'||item.name === 'F'||item.name === 'G'||item.name === 'H'||item.name === 'I'||item.name === 'J'||item.name === 'K'||item.name === 'L'||item.name === 'M'||item.name === 'N'||item.name === 'O'||item.name === 'P'||item.name === 'Q'||item.name === 'R'||item.name === 'S'||item.name === 'T'||item.name === 'U'||item.name === 'V'||item.name === 'W'||item.name === 'X'||item.name === 'Y'||item.name === 'Z'?'background-color:#eee;':''}}" bindtap="{{item.name === 'A'||item.name === 'B'||item.name === 'C'||item.name === 'D'||item.name === 'E'||item.name === 'F'||item.name === 'G'||item.name === 'H'||item.name === 'I'||item.name === 'J'||item.name === 'K'||item.name === 'L'||item.name === 'M'||item.name === 'N'||item.name === 'O'||item.name === 'P'||item.name === 'Q'||item.name === 'R'||item.name === 'S'||item.name === 'T'||item.name === 'U'||item.name === 'V'||item.name === 'W'||item.name === 'X'||item.name === 'Y'||item.name === 'Z'?'':'getCity'}}">
+                    {{item.name}}
+                </view>
+                
+            </view>
+        </view>-->
+        <view class="list">
+            <view>
+            <view data-hi="A" class="li" id="A" style="background-color:#eee;"> A </view>
+            </view>
+            <view>
+            <view data-hi="阿坝" class="li" id="576" bindtap="getCity"> 阿坝 </view>
+            </view>
+            <view>
+            <view data-hi="安康" class="li" id="408" bindtap="getCity"> 安康 </view>
+            </view>
+            <view>
+            <view data-hi="阿克苏" class="li" id="484" bindtap="getCity"> 阿克苏 </view>
+            </view>
+            <view>
+            <view data-hi="阿里" class="li" id="502" bindtap="getCity"> 阿里 </view>
+            </view>
+            <view>
+            <view data-hi="阿拉尔" class="li" id="563" bindtap="getCity"> 阿拉尔 </view>
+            </view>
+            <view>
+            <view data-hi="阿拉善盟" class="li" id="349" bindtap="getCity"> 阿拉善盟 </view>
+            </view>
+            <view>
+            <view data-hi="阿勒泰" class="li" id="485" bindtap="getCity"> 阿勒泰 </view>
+            </view>
+            <view>
+            <view data-hi="澳门" class="li" id="347" bindtap="getCity"> 澳门 </view>
+            </view>
+            <view>
+            <view data-hi="安庆" class="li" id="80" bindtap="getCity"> 安庆 </view>
+            </view>
+            <view>
+            <view data-hi="安顺" class="li" id="170" bindtap="getCity"> 安顺 </view>
+            </view>
+            <view>
+            <view data-hi="鞍山" class="li" id="334" bindtap="getCity"> 鞍山 </view>
+            </view>
+            <view>
+            <view data-hi="安阳" class="li" id="231" bindtap="getCity"> 安阳 </view>
+            </view>
+            <view>
+            <view data-hi="B" class="li" id="B12" style="background-color:#eee;"> B </view>
+            </view>
+            <view>
+            <view data-hi="蚌埠" class="li" id="81" bindtap="getCity"> 蚌埠 </view>
+            </view>
+            <view>
+            <view data-hi="白城" class="li" id="323" bindtap="getCity"> 白城 </view>
+            </view>
+            <view>
+            <view data-hi="保定" class="li" id="202" bindtap="getCity"> 保定 </view>
+            </view>
+            <view>
+            <view data-hi="博尔塔拉" class="li" id="487" bindtap="getCity"> 博尔塔拉 </view>
+            </view>
+            <view>
+            <view data-hi="北海" class="li" id="158" bindtap="getCity"> 北海 </view>
+            </view>
+            <view>
+            <view data-hi="毕节" class="li" id="171" bindtap="getCity"> 毕节 </view>
+            </view>
+            <view>
+            <view data-hi="宝鸡" class="li" id="409" bindtap="getCity"> 宝鸡 </view>
+            </view>
+            <view>
+            <view data-hi="北京" class="li" id="555" bindtap="getCity"> 北京 </view>
+            </view>
+            <view>
+            <view data-hi="百色" class="li" id="157" bindtap="getCity"> 百色 </view>
+            </view>
+            <view>
+            <view data-hi="白沙" class="li" id="192" bindtap="getCity"> 白沙 </view>
+            </view>
+            <view>
+            <view data-hi="白山" class="li" id="324" bindtap="getCity"> 白山 </view>
+            </view>
+            <view>
+            <view data-hi="保山" class="li" id="510" bindtap="getCity"> 保山 </view>
+            </view>
+            <view>
+            <view data-hi="保亭" class="li" id="196" bindtap="getCity"> 保亭 </view>
+            </view>
+            <view>
+            <view data-hi="包头" class="li" id="350" bindtap="getCity"> 包头 </view>
+            </view>
+            <view>
+            <view data-hi="本溪" class="li" id="335" bindtap="getCity"> 本溪 </view>
+            </view>
+            <view>
+            <view data-hi="白银" class="li" id="115" bindtap="getCity"> 白银 </view>
+            </view>
+            <view>
+            <view data-hi="巴音郭楞" class="li" id="495" bindtap="getCity"> 巴音郭楞 </view>
+            </view>
+            <view>
+            <view data-hi="巴彦淖尔" class="li" id="355" bindtap="getCity"> 巴彦淖尔 </view>
+            </view>
+            <view>
+            <view data-hi="滨州" class="li" id="375" bindtap="getCity"> 滨州 </view>
+            </view>
+            <view>
+            <view data-hi="巴中" class="li" id="419" bindtap="getCity"> 巴中 </view>
+            </view>
+            <view>
+            <view data-hi="C" class="li" id="C33" style="background-color:#eee;"> C </view>
+            </view>
+            <view>
+            <view data-hi="长春" class="li" id="322" bindtap="getCity"> 长春 </view>
+            </view>
+            <view>
+            <view data-hi="承德" class="li" id="205" bindtap="getCity"> 承德 </view>
+            </view>
+            <view>
+            <view data-hi="常德" class="li" id="270" bindtap="getCity"> 常德 </view>
+            </view>
+            <view>
+            <view data-hi="成都" class="li" id="418" bindtap="getCity"> 成都 </view>
+            </view>
+            <view>
+            <view data-hi="昌都" class="li" id="503" bindtap="getCity"> 昌都 </view>
+            </view>
+            <view>
+            <view data-hi="赤峰" class="li" id="351" bindtap="getCity"> 赤峰 </view>
+            </view>
+            <view>
+            <view data-hi="巢湖" class="li" id="83" bindtap="getCity"> 巢湖 </view>
+            </view>
+            <view>
+            <view data-hi="昌江" class="li" id="193" bindtap="getCity"> 昌江 </view>
+            </view>
+            <view>
+            <view data-hi="昌吉" class="li" id="488" bindtap="getCity"> 昌吉 </view>
+            </view>
+            <view>
+            <view data-hi="澄迈" class="li" id="189" bindtap="getCity"> 澄迈 </view>
+            </view>
+            <view>
+            <view data-hi="重庆" class="li" id="557" bindtap="getCity"> 重庆 </view>
+            </view>
+            <view>
+            <view data-hi="长沙" class="li" id="269" bindtap="getCity"> 长沙 </view>
+            </view>
+            <view>
+            <view data-hi="楚雄" class="li" id="511" bindtap="getCity"> 楚雄 </view>
+            </view>
+            <view>
+            <view data-hi="朝阳" class="li" id="336" bindtap="getCity"> 朝阳 </view>
+            </view>
+            <view>
+            <view data-hi="滁州" class="li" id="84" bindtap="getCity"> 滁州 </view>
+            </view>
+            <view>
+            <view data-hi="潮州" class="li" id="131" bindtap="getCity"> 潮州 </view>
+            </view>
+            <view>
+            <view data-hi="沧州" class="li" id="204" bindtap="getCity"> 沧州 </view>
+            </view>
+            <view>
+            <view data-hi="郴州" class="li" id="271" bindtap="getCity"> 郴州 </view>
+            </view>
+            <view>
+            <view data-hi="常州" class="li" id="285" bindtap="getCity"> 常州 </view>
+            </view>
+            <view>
+            <view data-hi="长治" class="li" id="395" bindtap="getCity"> 长治 </view>
+            </view>
+            <view>
+            <view data-hi="池州" class="li" id="573" bindtap="getCity"> 池州 </view>
+            </view>
+            <view>
+            <view data-hi="崇左" class="li" id="582" bindtap="getCity"> 崇左 </view>
+            </view>
+            <view>
+            <view data-hi="D" class="li" id="D56" style="background-color:#eee;"> D </view>
+            </view>
+            <view>
+            <view data-hi="定安" class="li" id="187" bindtap="getCity"> 定安 </view>
+            </view>
+            <view>
+            <view data-hi="丹东" class="li" id="338" bindtap="getCity"> 丹东 </view>
+            </view>
+            <view>
+            <view data-hi="东方" class="li" id="186" bindtap="getCity"> 东方 </view>
+            </view>
+            <view>
+            <view data-hi="东莞" class="li" id="133" bindtap="getCity"> 东莞 </view>
+            </view>
+            <view>
+            <view data-hi="德宏" class="li" id="581" bindtap="getCity"> 德宏 </view>
+            </view>
+            <view>
+            <view data-hi="大连" class="li" id="337" bindtap="getCity"> 大连 </view>
+            </view>
+            <view>
+            <view data-hi="大理" class="li" id="509" bindtap="getCity"> 大理 </view>
+            </view>
+            <view>
+            <view data-hi="大庆" class="li" id="218" bindtap="getCity"> 大庆 </view>
+            </view>
+            <view>
+            <view data-hi="迪庆" class="li" id="580" bindtap="getCity"> 迪庆 </view>
+            </view>
+            <view>
+            <view data-hi="大同" class="li" id="396" bindtap="getCity"> 大同 </view>
+            </view>
+            <view>
+            <view data-hi="定西" class="li" id="116" bindtap="getCity"> 定西 </view>
+            </view>
+            <view>
+            <view data-hi="大兴安岭" class="li" id="219" bindtap="getCity"> 大兴安岭 </view>
+            </view>
+            <view>
+            <view data-hi="东营" class="li" id="378" bindtap="getCity"> 东营 </view>
+            </view>
+            <view>
+            <view data-hi="德阳" class="li" id="421" bindtap="getCity"> 德阳 </view>
+            </view>
+            <view>
+            <view data-hi="德州" class="li" id="377" bindtap="getCity"> 德州 </view>
+            </view>
+            <view>
+            <view data-hi="达州" class="li" id="420" bindtap="getCity"> 达州 </view>
+            </view>
+            <view>
+            <view data-hi="E" class="li" id="E73" style="background-color:#eee;"> E </view>
+            </view>
+            <view>
+            <view data-hi="鄂尔多斯" class="li" id="558" bindtap="getCity"> 鄂尔多斯 </view>
+            </view>
+            <view>
+            <view data-hi="恩施" class="li" id="253" bindtap="getCity"> 恩施 </view>
+            </view>
+            <view>
+            <view data-hi="鄂州" class="li" id="254" bindtap="getCity"> 鄂州 </view>
+            </view>
+            <view>
+            <view data-hi="F" class="li" id="F77" style="background-color:#eee;"> F </view>
+            </view>
+            <view>
+            <view data-hi="防城港" class="li" id="160" bindtap="getCity"> 防城港 </view>
+            </view>
+            <view>
+            <view data-hi="佛山" class="li" id="134" bindtap="getCity"> 佛山 </view>
+            </view>
+            <view>
+            <view data-hi="抚顺" class="li" id="339" bindtap="getCity"> 抚顺 </view>
+            </view>
+            <view>
+            <view data-hi="阜新" class="li" id="340" bindtap="getCity"> 阜新 </view>
+            </view>
+            <view>
+            <view data-hi="阜阳" class="li" id="85" bindtap="getCity"> 阜阳 </view>
+            </view>
+            <view>
+            <view data-hi="福州" class="li" id="99" bindtap="getCity"> 福州 </view>
+            </view>
+            <view>
+            <view data-hi="抚州" class="li" id="310" bindtap="getCity"> 抚州 </view>
+            </view>
+            <view>
+            <view data-hi="G" class="li" id="G85" style="background-color:#eee;"> G </view>
+            </view>
+            <view>
+            <view data-hi="广安" class="li" id="425" bindtap="getCity"> 广安 </view>
+            </view>
+            <view>
+            <view data-hi="格尔木" class="li" id="367" bindtap="getCity"> 格尔木 </view>
+            </view>
+            <view>
+            <view data-hi="贵港" class="li" id="167" bindtap="getCity"> 贵港 </view>
+            </view>
+            <view>
+            <view data-hi="桂林" class="li" id="159" bindtap="getCity"> 桂林 </view>
+            </view>
+            <view>
+            <view data-hi="果洛" class="li" id="566" bindtap="getCity"> 果洛 </view>
+            </view>
+            <view>
+            <view data-hi="甘南" class="li" id="118" bindtap="getCity"> 甘南 </view>
+            </view>
+            <view>
+            <view data-hi="高雄" class="li" id="448" bindtap="getCity"> 高雄 </view>
+            </view>
+            <view>
+            <view data-hi="贵阳" class="li" id="169" bindtap="getCity"> 贵阳 </view>
+            </view>
+            <view>
+            <view data-hi="固原" class="li" id="361" bindtap="getCity"> 固原 </view>
+            </view>
+            <view>
+            <view data-hi="广元" class="li" id="426" bindtap="getCity"> 广元 </view>
+            </view>
+            <view>
+            <view data-hi="广州" class="li" id="129" bindtap="getCity"> 广州 </view>
+            </view>
+            <view>
+            <view data-hi="赣州" class="li" id="311" bindtap="getCity"> 赣州 </view>
+            </view>
+            <view>
+            <view data-hi="甘孜" class="li" id="575" bindtap="getCity"> 甘孜 </view>
+            </view>
+            <view>
+            <view data-hi="H" class="li" id="H99" style="background-color:#eee;"> H </view>
+            </view>
+            <view>
+            <view data-hi="淮安" class="li" id="287" bindtap="getCity"> 淮安 </view>
+            </view>
+            <view>
+            <view data-hi="淮北" class="li" id="87" bindtap="getCity"> 淮北 </view>
+            </view>
+            <view>
+            <view data-hi="鹤壁" class="li" id="232" bindtap="getCity"> 鹤壁 </view>
+            </view>
+            <view>
+            <view data-hi="海北" class="li" id="568" bindtap="getCity"> 海北 </view>
+            </view>
+            <view>
+            <view data-hi="河池" class="li" id="161" bindtap="getCity"> 河池 </view>
+            </view>
+            <view>
+            <view data-hi="邯郸" class="li" id="207" bindtap="getCity"> 邯郸 </view>
+            </view>
+            <view>
+            <view data-hi="海东" class="li" id="369" bindtap="getCity"> 海东 </view>
+            </view>
+            <view>
+            <view data-hi="哈尔滨" class="li" id="216" bindtap="getCity"> 哈尔滨 </view>
+            </view>
+            <view>
+            <view data-hi="合肥" class="li" id="79" bindtap="getCity"> 合肥 </view>
+            </view>
+            <view>
+            <view data-hi="鹤岗" class="li" id="220" bindtap="getCity"> 鹤岗 </view>
+            </view>
+            <view>
+            <view data-hi="黄冈" class="li" id="255" bindtap="getCity"> 黄冈 </view>
+            </view>
+            <view>
+            <view data-hi="黑河" class="li" id="221" bindtap="getCity"> 黑河 </view>
+            </view>
+            <view>
+            <view data-hi="怀化" class="li" id="273" bindtap="getCity"> 怀化 </view>
+            </view>
+            <view>
+            <view data-hi="红河" class="li" id="577" bindtap="getCity"> 红河 </view>
+            </view>
+            <view>
+            <view data-hi="呼和浩特" class="li" id="348" bindtap="getCity"> 呼和浩特 </view>
+            </view>
+            <view>
+            <view data-hi="海口" class="li" id="179" bindtap="getCity"> 海口 </view>
+            </view>
+            <view>
+            <view data-hi="呼伦贝尔" class="li" id="353" bindtap="getCity"> 呼伦贝尔 </view>
+            </view>
+            <view>
+            <view data-hi="葫芦岛" class="li" id="341" bindtap="getCity"> 葫芦岛 </view>
+            </view>
+            <view>
+            <view data-hi="哈密" class="li" id="490" bindtap="getCity"> 哈密 </view>
+            </view>
+            <view>
+            <view data-hi="淮南" class="li" id="89" bindtap="getCity"> 淮南 </view>
+            </view>
+            <view>
+            <view data-hi="黄南" class="li" id="564" bindtap="getCity"> 黄南 </view>
+            </view>
+            <view>
+            <view data-hi="海南" class="li" id="565" bindtap="getCity"> 海南 </view>
+            </view>
+            <view>
+            <view data-hi="黄山" class="li" id="90" bindtap="getCity"> 黄山 </view>
+            </view>
+            <view>
+            <view data-hi="衡水" class="li" id="208" bindtap="getCity"> 衡水 </view>
+            </view>
+            <view>
+            <view data-hi="黄石" class="li" id="256" bindtap="getCity"> 黄石 </view>
+            </view>
+            <view>
+            <view data-hi="和田" class="li" id="491" bindtap="getCity"> 和田 </view>
+            </view>
+            <view>
+            <view data-hi="海西" class="li" id="567" bindtap="getCity"> 海西 </view>
+            </view>
+            <view>
+            <view data-hi="河源" class="li" id="135" bindtap="getCity"> 河源 </view>
+            </view>
+            <view>
+            <view data-hi="衡阳" class="li" id="272" bindtap="getCity"> 衡阳 </view>
+            </view>
+            <view>
+            <view data-hi="亳州" class="li" id="82" bindtap="getCity"> 亳州 </view>
+            </view>
+            <view>
+            <view data-hi="惠州" class="li" id="136" bindtap="getCity"> 惠州 </view>
+            </view>
+            <view>
+            <view data-hi="贺州" class="li" id="162" bindtap="getCity"> 贺州 </view>
+            </view>
+            <view>
+            <view data-hi="菏泽" class="li" id="379" bindtap="getCity"> 菏泽 </view>
+            </view>
+            <view>
+            <view data-hi="汉中" class="li" id="410" bindtap="getCity"> 汉中 </view>
+            </view>
+            <view>
+            <view data-hi="杭州" class="li" id="528" bindtap="getCity"> 杭州 </view>
+            </view>
+            <view>
+            <view data-hi="湖州" class="li" id="535" bindtap="getCity"> 湖州 </view>
+            </view>
+            <view>
+            <view data-hi="吉安" class="li" id="312" bindtap="getCity"> 吉安 </view>
+            </view>
+            <view>
+            <view data-hi="金昌" class="li" id="119" bindtap="getCity"> 金昌 </view>
+            </view>
+            <view>
+            <view data-hi="晋城" class="li" id="398" bindtap="getCity"> 晋城 </view>
+            </view>
+            <view>
+            <view data-hi="景德镇" class="li" id="313" bindtap="getCity"> 景德镇 </view>
+            </view>
+            <view>
+            <view data-hi="金华" class="li" id="537" bindtap="getCity"> 金华 </view>
+            </view>
+            <view>
+            <view data-hi="九江" class="li" id="315" bindtap="getCity"> 九江 </view>
+            </view>
+            <view>
+            <view data-hi="吉林" class="li" id="328" bindtap="getCity"> 吉林 </view>
+            </view>
+            <view>
+            <view data-hi="江门" class="li" id="137" bindtap="getCity"> 江门 </view>
+            </view>
+            <view>
+            <view data-hi="荆门" class="li" id="257" bindtap="getCity"> 荆门 </view>
+            </view>
+            <view>
+            <view data-hi="佳木斯" class="li" id="222" bindtap="getCity"> 佳木斯 </view>
+            </view>
+            <view>
+            <view data-hi="济南" class="li" id="374" bindtap="getCity"> 济南 </view>
+            </view>
+            <view>
+            <view data-hi="济宁" class="li" id="380" bindtap="getCity"> 济宁 </view>
+            </view>
+            <view>
+            <view data-hi="酒泉" class="li" id="120" bindtap="getCity"> 酒泉 </view>
+            </view>
+            <view>
+            <view data-hi="鸡西" class="li" id="223" bindtap="getCity"> 鸡西 </view>
+            </view>
+            <view>
+            <view data-hi="嘉兴" class="li" id="536" bindtap="getCity"> 嘉兴 </view>
+            </view>
+            <view>
+            <view data-hi="揭阳" class="li" id="138" bindtap="getCity"> 揭阳 </view>
+            </view>
+            <view>
+            <view data-hi="济源" class="li" id="235" bindtap="getCity"> 济源 </view>
+            </view>
+            <view>
+            <view data-hi="嘉峪关" class="li" id="127" bindtap="getCity"> 嘉峪关 </view>
+            </view>
+            <view>
+            <view data-hi="焦作" class="li" id="234" bindtap="getCity"> 焦作 </view>
+            </view>
+            <view>
+            <view data-hi="荆州" class="li" id="258" bindtap="getCity"> 荆州 </view>
+            </view>
+            <view>
+            <view data-hi="锦州" class="li" id="342" bindtap="getCity"> 锦州 </view>
+            </view>
+            <view>
+            <view data-hi="晋中" class="li" id="559" bindtap="getCity"> 晋中 </view>
+            </view>
+            <view>
+            <view data-hi="K" class="li" id="K158" style="background-color:#eee;"> K </view>
+            </view>
+            <view>
+            <view data-hi="开封" class="li" id="236" bindtap="getCity"> 开封 </view>
+            </view>
+            <view>
+            <view data-hi="克拉玛依" class="li" id="493" bindtap="getCity"> 克拉玛依 </view>
+            </view>
+            <view>
+            <view data-hi="昆明" class="li" id="508" bindtap="getCity"> 昆明 </view>
+            </view>
+            <view>
+            <view data-hi="喀什" class="li" id="492" bindtap="getCity"> 喀什 </view>
+            </view>
+            <view>
+            <view data-hi="克州" class="li" id="486" bindtap="getCity"> 克州 </view>
+            </view>
+            <view>
+            <view data-hi="L" class="li" id="L164" style="background-color:#eee;"> L </view>
+            </view>
+            <view>
+            <view data-hi="六安" class="li" id="92" bindtap="getCity"> 六安 </view>
+            </view>
+            <view>
+            <view data-hi="来宾" class="li" id="164" bindtap="getCity"> 来宾 </view>
+            </view>
+            <view>
+            <view data-hi="聊城" class="li" id="382" bindtap="getCity"> 聊城 </view>
+            </view>
+            <view>
+            <view data-hi="临沧" class="li" id="517" bindtap="getCity"> 临沧 </view>
+            </view>
+            <view>
+            <view data-hi="乐东" class="li" id="194" bindtap="getCity"> 乐东 </view>
+            </view>
+            <view>
+            <view data-hi="娄底" class="li" id="275" bindtap="getCity"> 娄底 </view>
+            </view>
+            <view>
+            <view data-hi="廊坊" class="li" id="209" bindtap="getCity"> 廊坊 </view>
+            </view>
+            <view>
+            <view data-hi="临汾" class="li" id="400" bindtap="getCity"> 临汾 </view>
+            </view>
+            <view>
+            <view data-hi="临高" class="li" id="190" bindtap="getCity"> 临高 </view>
+            </view>
+            <view>
+            <view data-hi="漯河" class="li" id="237" bindtap="getCity"> 漯河 </view>
+            </view>
+            <view>
+            <view data-hi="丽江" class="li" id="518" bindtap="getCity"> 丽江 </view>
+            </view>
+            <view>
+            <view data-hi="吕梁" class="li" id="560" bindtap="getCity"> 吕梁 </view>
+            </view>
+            <view>
+            <view data-hi="陇南" class="li" id="570" bindtap="getCity"> 陇南 </view>
+            </view>
+            <view>
+            <view data-hi="六盘水" class="li" id="174" bindtap="getCity"> 六盘水 </view>
+            </view>
+            <view>
+            <view data-hi="陵水" class="li" id="195" bindtap="getCity"> 陵水 </view>
+            </view>
+            <view>
+            <view data-hi="乐山" class="li" id="429" bindtap="getCity"> 乐山 </view>
+            </view>
+            <view>
+            <view data-hi="拉萨" class="li" id="501" bindtap="getCity"> 拉萨 </view>
+            </view>
+            <view>
+            <view data-hi="丽水" class="li" id="540" bindtap="getCity"> 丽水 </view>
+            </view>
+            <view>
+            <view data-hi="凉山" class="li" id="574" bindtap="getCity"> 凉山 </view>
+            </view>
+            <view>
+            <view data-hi="莱芜" class="li" id="381" bindtap="getCity"> 莱芜 </view>
+            </view>
+            <view>
+            <view data-hi="临夏" class="li" id="121" bindtap="getCity"> 临夏 </view>
+            </view>
+            <view>
+            <view data-hi="龙岩" class="li" id="101" bindtap="getCity"> 龙岩 </view>
+            </view>
+            <view>
+            <view data-hi="洛阳" class="li" id="238" bindtap="getCity"> 洛阳 </view>
+            </view>
+            <view>
+            <view data-hi="辽源" class="li" id="326" bindtap="getCity"> 辽源 </view>
+            </view>
+            <view>
+            <view data-hi="辽阳" class="li" id="343" bindtap="getCity"> 辽阳 </view>
+            </view>
+            <view>
+            <view data-hi="临沂" class="li" id="383" bindtap="getCity"> 临沂 </view>
+            </view>
+            <view>
+            <view data-hi="连云港" class="li" id="291" bindtap="getCity"> 连云港 </view>
+            </view>
+            <view>
+            <view data-hi="兰州" class="li" id="114" bindtap="getCity"> 兰州 </view>
+            </view>
+            <view>
+            <view data-hi="柳州" class="li" id="163" bindtap="getCity"> 柳州 </view>
+            </view>
+            <view>
+            <view data-hi="泸州" class="li" id="430" bindtap="getCity"> 泸州 </view>
+            </view>
+            <view>
+            <view data-hi="林芝" class="li" id="504" bindtap="getCity"> 林芝 </view>
+            </view>
+            <view>
+            <view data-hi="M" class="li" id="M196" style="background-color:#eee;"> M </view>
+            </view>
+            <view>
+            <view data-hi="马鞍山" class="li" id="93" bindtap="getCity"> 马鞍山 </view>
+            </view>
+            <view>
+            <view data-hi="牡丹江" class="li" id="224" bindtap="getCity"> 牡丹江 </view>
+            </view>
+            <view>
+            <view data-hi="茂名" class="li" id="140" bindtap="getCity"> 茂名 </view>
+            </view>
+            <view>
+            <view data-hi="眉山" class="li" id="433" bindtap="getCity"> 眉山 </view>
+            </view>
+            <view>
+            <view data-hi="绵阳" class="li" id="432" bindtap="getCity"> 绵阳 </view>
+            </view>
+            <view>
+            <view data-hi="梅州" class="li" id="141" bindtap="getCity"> 梅州 </view>
+            </view>
+            <view>
+            <view data-hi="N" class="li" id="N203" style="background-color:#eee;"> N </view>
+            </view>
+            <view>
+            <view data-hi="宁波" class="li" id="541" bindtap="getCity"> 宁波 </view>
+            </view>
+            <view>
+            <view data-hi="南昌" class="li" id="309" bindtap="getCity"> 南昌 </view>
+            </view>
+            <view>
+            <view data-hi="南充" class="li" id="434" bindtap="getCity"> 南充 </view>
+            </view>
+            <view>
+            <view data-hi="宁德" class="li" id="103" bindtap="getCity"> 宁德 </view>
+            </view>
+            <view>
+            <view data-hi="南京" class="li" id="283" bindtap="getCity"> 南京 </view>
+            </view>
+            <view>
+            <view data-hi="内江" class="li" id="435" bindtap="getCity"> 内江 </view>
+            </view>
+            <view>
+            <view data-hi="怒江" class="li" id="579" bindtap="getCity"> 怒江 </view>
+            </view>
+            <view>
+            <view data-hi="南宁" class="li" id="156" bindtap="getCity"> 南宁 </view>
+            </view>
+            <view>
+            <view data-hi="南平" class="li" id="102" bindtap="getCity"> 南平 </view>
+            </view>
+            <view>
+            <view data-hi="那曲" class="li" id="505" bindtap="getCity"> 那曲 </view>
+            </view>
+            <view>
+            <view data-hi="南沙" class="li" id="199" bindtap="getCity"> 南沙 </view>
+            </view>
+            <view>
+            <view data-hi="南通" class="li" id="292" bindtap="getCity"> 南通 </view>
+            </view>
+            <view>
+            <view data-hi="南阳" class="li" id="239" bindtap="getCity"> 南阳 </view>
+            </view>
+            <view>
+            <view data-hi="平顶山" class="li" id="240" bindtap="getCity"> 平顶山 </view>
+            </view>
+            <view>
+            <view data-hi="普洱" class="li" id="578" bindtap="getCity"> 普洱 </view>
+            </view>
+            <view>
+            <view data-hi="盘锦" class="li" id="344" bindtap="getCity"> 盘锦 </view>
+            </view>
+            <view>
+            <view data-hi="平凉" class="li" id="122" bindtap="getCity"> 平凉 </view>
+            </view>
+            <view>
+            <view data-hi="莆田" class="li" id="104" bindtap="getCity"> 莆田 </view>
+            </view>
+            <view>
+            <view data-hi="萍乡" class="li" id="317" bindtap="getCity"> 萍乡 </view>
+            </view>
+            <view>
+            <view data-hi="濮阳" class="li" id="241" bindtap="getCity"> 濮阳 </view>
+            </view>
+            <view>
+            <view data-hi="攀枝花" class="li" id="436" bindtap="getCity"> 攀枝花 </view>
+            </view>
+            <view>
+            <view data-hi="Q" class="li" id="Q225" style="background-color:#eee;"> Q </view>
+            </view>
+            <view>
+            <view data-hi="青岛" class="li" id="385" bindtap="getCity"> 青岛 </view>
+            </view>
+            <view>
+            <view data-hi="黔东南" class="li" id="173" bindtap="getCity"> 黔东南 </view>
+            </view>
+            <view>
+            <view data-hi="琼海" class="li" id="182" bindtap="getCity"> 琼海 </view>
+            </view>
+            <view>
+            <view data-hi="秦皇岛" class="li" id="211" bindtap="getCity"> 秦皇岛 </view>
+            </view>
+            <view>
+            <view data-hi="潜江" class="li" id="259" bindtap="getCity"> 潜江 </view>
+            </view>
+            <view>
+            <view data-hi="曲靖" class="li" id="521" bindtap="getCity"> 曲靖 </view>
+            </view>
+            <view>
+            <view data-hi="黔南" class="li" id="172" bindtap="getCity"> 黔南 </view>
+            </view>
+            <view>
+            <view data-hi="齐齐哈尔" class="li" id="225" bindtap="getCity"> 齐齐哈尔 </view>
+            </view>
+            <view>
+            <view data-hi="七台河" class="li" id="226" bindtap="getCity"> 七台河 </view>
+            </view>
+            <view>
+            <view data-hi="黔西南" class="li" id="176" bindtap="getCity"> 黔西南 </view>
+            </view>
+            <view>
+            <view data-hi="清远" class="li" id="142" bindtap="getCity"> 清远 </view>
+            </view>
+            <view>
+            <view data-hi="庆阳" class="li" id="569" bindtap="getCity"> 庆阳 </view>
+            </view>
+            <view>
+            <view data-hi="泉州" class="li" id="105" bindtap="getCity"> 泉州 </view>
+            </view>
+            <view>
+            <view data-hi="钦州" class="li" id="165" bindtap="getCity"> 钦州 </view>
+            </view>
+            <view>
+            <view data-hi="琼中" class="li" id="197" bindtap="getCity"> 琼中 </view>
+            </view>
+            <view>
+            <view data-hi="衢州" class="li" id="545" bindtap="getCity"> 衢州 </view>
+            </view>
+            <view>
+            <view data-hi="R" class="li" id="R242" style="background-color:#eee;"> R </view>
+            </view>
+            <view>
+            <view data-hi="日喀则" class="li" id="506" bindtap="getCity"> 日喀则 </view>
+            </view>
+            <view>
+            <view data-hi="日照" class="li" id="387" bindtap="getCity"> 日照 </view>
+            </view>
+            <view>
+            <view data-hi="S" class="li" id="S245" style="background-color:#eee;"> S </view>
+            </view>
+            <view>
+            <view data-hi="韶关" class="li" id="145" bindtap="getCity"> 韶关 </view>
+            </view>
+            <view>
+            <view data-hi="绥化" class="li" id="228" bindtap="getCity"> 绥化 </view>
+            </view>
+            <view>
+            <view data-hi="上海" class="li" id="556" bindtap="getCity"> 上海 </view>
+            </view>
+            <view>
+            <view data-hi="石河子" class="li" id="497" bindtap="getCity"> 石河子 </view>
+            </view>
+            <view>
+            <view data-hi="石家庄" class="li" id="201" bindtap="getCity"> 石家庄 </view>
+            </view>
+            <view>
+            <view data-hi="商洛" class="li" id="561" bindtap="getCity"> 商洛 </view>
+            </view>
+            <view>
+            <view data-hi="三明" class="li" id="106" bindtap="getCity"> 三明 </view>
+            </view>
+            <view>
+            <view data-hi="三门峡" class="li" id="242" bindtap="getCity"> 三门峡 </view>
+            </view>
+            <view>
+            <view data-hi="遂宁" class="li" id="437" bindtap="getCity"> 遂宁 </view>
+            </view>
+            <view>
+            <view data-hi="山南" class="li" id="507" bindtap="getCity"> 山南 </view>
+            </view>
+            <view>
+            <view data-hi="神农架" class="li" id="571" bindtap="getCity"> 神农架 </view>
+            </view>
+            <view>
+            <view data-hi="四平" class="li" id="329" bindtap="getCity"> 四平 </view>
+            </view>
+            <view>
+            <view data-hi="商丘" class="li" id="243" bindtap="getCity"> 商丘 </view>
+            </view>
+            <view>
+            <view data-hi="宿迁" class="li" id="295" bindtap="getCity"> 宿迁 </view>
+            </view>
+            <view>
+            <view data-hi="上饶" class="li" id="318" bindtap="getCity"> 上饶 </view>
+            </view>
+            <view>
+            <view data-hi="汕头" class="li" id="143" bindtap="getCity"> 汕头 </view>
+            </view>
+            <view>
+            <view data-hi="汕尾" class="li" id="144" bindtap="getCity"> 汕尾 </view>
+            </view>
+            <view>
+            <view data-hi="绍兴" class="li" id="548" bindtap="getCity"> 绍兴 </view>
+            </view>
+            <view>...</view>
+            <view>
+            <view data-hi="十堰" class="li" id="260" bindtap="getCity"> 十堰 </view>
+            </view>
+            <view>
+            <view data-hi="邵阳" class="li" id="276" bindtap="getCity"> 邵阳 </view>
+            </view>
+            <view>
+            <view data-hi="松原" class="li" id="330" bindtap="getCity"> 松原 </view>
+            </view>
+            <view>
+            <view data-hi="沈阳" class="li" id="333" bindtap="getCity"> 沈阳 </view>
+            </view>
+            <view>
+            <view data-hi="双鸭山" class="li" id="227" bindtap="getCity"> 双鸭山 </view>
+            </view>
+            <view>
+            <view data-hi="宿州" class="li" id="94" bindtap="getCity"> 宿州 </view>
+            </view>
+            <view>
+            <view data-hi="深圳" class="li" id="146" bindtap="getCity"> 深圳 </view>
+            </view>
+            <view>
+            <view data-hi="随州" class="li" id="261" bindtap="getCity"> 随州 </view>
+            </view>
+            <view>
+            <view data-hi="苏州" class="li" id="296" bindtap="getCity"> 苏州 </view>
+            </view>
+            <view>
+            <view data-hi="朔州" class="li" id="402" bindtap="getCity"> 朔州 </view>
+            </view>
+            <view>
+            <view data-hi="石嘴山" class="li" id="363" bindtap="getCity"> 石嘴山 </view>
+            </view>
+            <view>
+            <view data-hi="T" class="li" id="T276" style="background-color:#eee;"> T </view>
+            </view>
+            <view>
+            <view data-hi="泰安" class="li" id="388" bindtap="getCity"> 泰安 </view>
+            </view>
+            <view>
+            <view data-hi="台北" class="li" id="444" bindtap="getCity"> 台北 </view>
+            </view>
+            <view>
+            <view data-hi="屯昌" class="li" id="188" bindtap="getCity"> 屯昌 </view>
+            </view>
+            <view>
+            <view data-hi="铜川" class="li" id="414" bindtap="getCity"> 铜川 </view>
+            </view>
+            <view>
+            <view data-hi="塔城" class="li" id="498" bindtap="getCity"> 塔城 </view>
+            </view>
+            <view>
+            <view data-hi="通化" class="li" id="331" bindtap="getCity"> 通化 </view>
+            </view>
+            <view>
+            <view data-hi="天津" class="li" id="464" bindtap="getCity"> 天津 </view>
+            </view>
+            <view>
+            <view data-hi="铜陵" class="li" id="95" bindtap="getCity"> 铜陵 </view>
+            </view>
+            <view>
+            <view data-hi="铁岭" class="li" id="345" bindtap="getCity"> 铁岭 </view>
+            </view>
+            <view>
+            <view data-hi="通辽" class="li" id="356" bindtap="getCity"> 通辽 </view>
+            </view>
+            <view>
+            <view data-hi="吐鲁番" class="li" id="499" bindtap="getCity"> 吐鲁番 </view>
+            </view>
+            <view>
+            <view data-hi="天门" class="li" id="572" bindtap="getCity"> 天门 </view>
+            </view>
+            <view>
+            <view data-hi="铜仁" class="li" id="175" bindtap="getCity"> 铜仁 </view>
+            </view>
+            <view>
+            <view data-hi="天水" class="li" id="123" bindtap="getCity"> 天水 </view>
+            </view>
+            <view>
+            <view data-hi="唐山" class="li" id="212" bindtap="getCity"> 唐山 </view>
+            </view>
+            <view>
+            <view data-hi="太原" class="li" id="394" bindtap="getCity"> 太原 </view>
+            </view>
+            <view>
+            <view data-hi="泰州" class="li" id="298" bindtap="getCity"> 泰州 </view>
+            </view>
+            <view>
+            <view data-hi="台中" class="li" id="447" bindtap="getCity"> 台中 </view>
+            </view>
+            <view>
+            <view data-hi="台州" class="li" id="550" bindtap="getCity"> 台州 </view>
+            </view>
+            <view>
+            <view data-hi="文昌" class="li" id="184" bindtap="getCity"> 文昌 </view>
+            </view>
+            <view>
+            <view data-hi="潍坊" class="li" id="389" bindtap="getCity"> 潍坊 </view>
+            </view>
+            <view>
+            <view data-hi="芜湖" class="li" id="97" bindtap="getCity"> 芜湖 </view>
+            </view>
+            <view>
+            <view data-hi="武汉" class="li" id="252" bindtap="getCity"> 武汉 </view>
+            </view>
+            <view>
+            <view data-hi="乌海" class="li" id="357" bindtap="getCity"> 乌海 </view>
+            </view>
+            <view>
+            <view data-hi="威海" class="li" id="390" bindtap="getCity"> 威海 </view>
+            </view>
+            <view>
+            <view data-hi="乌兰察布" class="li" id="354" bindtap="getCity"> 乌兰察布 </view>
+            </view>
+            <view>
+            <view data-hi="乌鲁木齐" class="li" id="483" bindtap="getCity"> 乌鲁木齐 </view>
+            </view>
+            <view>
+            <view data-hi="万宁" class="li" id="185" bindtap="getCity"> 万宁 </view>
+            </view>
+            <view>
+            <view data-hi="渭南" class="li" id="411" bindtap="getCity"> 渭南 </view>
+            </view>
+            <view>
+            <view data-hi="文山" class="li" id="523" bindtap="getCity"> 文山 </view>
+            </view>
+            <view>
+            <view data-hi="武威" class="li" id="125" bindtap="getCity"> 武威 </view>
+            </view>
+            <view>
+            <view data-hi="无锡" class="li" id="300" bindtap="getCity"> 无锡 </view>
+            </view>
+            <view>
+            <view data-hi="梧州" class="li" id="166" bindtap="getCity"> 梧州 </view>
+            </view>
+            <view>
+            <view data-hi="吴忠" class="li" id="364" bindtap="getCity"> 吴忠 </view>
+            </view>
+            <view>
+            <view data-hi="温州" class="li" id="552" bindtap="getCity"> 温州 </view>
+            </view>
+            <view>
+            <view data-hi="五指山" class="li" id="181" bindtap="getCity"> 五指山 </view>
+            </view>
+            <view>
+            <view data-hi="X" class="li" id="X313" style="background-color:#eee;"> X </view>
+            </view>
+            <view>
+            <view data-hi="西安" class="li" id="407" bindtap="getCity"> 西安 </view>
+            </view>
+            <view>
+            <view data-hi="兴安盟" class="li" id="358" bindtap="getCity"> 兴安盟 </view>
+            </view>
+            <view>
+            <view data-hi="宣城" class="li" id="98" bindtap="getCity"> 宣城 </view>
+            </view>
+            <view>
+            <view data-hi="许昌" class="li" id="246" bindtap="getCity"> 许昌 </view>
+            </view>
+            <view>
+            <view data-hi="香港" class="li" id="249" bindtap="getCity"> 香港 </view>
+            </view>
+            <view>
+            <view data-hi="孝感" class="li" id="267" bindtap="getCity"> 孝感 </view>
+            </view>
+            <view>
+            <view data-hi="锡林郭勒" class="li" id="359" bindtap="getCity"> 锡林郭勒 </view>
+            </view>
+            <view>
+            <view data-hi="厦门" class="li" id="112" bindtap="getCity"> 厦门 </view>
+            </view>
+            <view>
+            <view data-hi="咸宁" class="li" id="264" bindtap="getCity"> 咸宁 </view>
+            </view>
+            <view>
+            <view data-hi="西宁" class="li" id="365" bindtap="getCity"> 西宁 </view>
+            </view>
+            <view>
+            <view data-hi="西沙" class="li" id="198" bindtap="getCity"> 西沙 </view>
+            </view>
+            <view>
+            <view data-hi="西双版纳" class="li" id="515" bindtap="getCity"> 西双版纳 </view>
+            </view>
+            <view>
+            <view data-hi="邢台" class="li" id="214" bindtap="getCity"> 邢台 </view>
+            </view>
+            <view>
+            <view data-hi="仙桃" class="li" id="263" bindtap="getCity"> 仙桃 </view>
+            </view>
+            <view>
+            <view data-hi="湘潭" class="li" id="277" bindtap="getCity"> 湘潭 </view>
+            </view>
+            <view>
+            <view data-hi="新乡" class="li" id="244" bindtap="getCity"> 新乡 </view>
+            </view>
+            <view>
+            <view data-hi="湘西" class="li" id="274" bindtap="getCity"> 湘西 </view>
+            </view>
+            <view>
+            <view data-hi="信阳" class="li" id="245" bindtap="getCity"> 信阳 </view>
+            </view>
+            <view>
+            <view data-hi="襄阳" class="li" id="265" bindtap="getCity"> 襄阳 </view>
+            </view>
+            <view>
+            <view data-hi="新余" class="li" id="319" bindtap="getCity"> 新余 </view>
+            </view>
+            <view>
+            <view data-hi="咸阳" class="li" id="415" bindtap="getCity"> 咸阳 </view>
+            </view>
+            <view>
+            <view data-hi="徐州" class="li" id="301" bindtap="getCity"> 徐州 </view>
+            </view>
+            <view>
+            <view data-hi="忻州" class="li" id="403" bindtap="getCity"> 忻州 </view>
+            </view>
+            <view>
+            <view data-hi="Y" class="li" id="Y337" style="background-color:#eee;"> Y </view>
+            </view>
+            <view>
+            <view data-hi="延安" class="li" id="416" bindtap="getCity"> 延安 </view>
+            </view>
+            <view>
+            <view data-hi="雅安" class="li" id="440" bindtap="getCity"> 雅安 </view>
+            </view>
+            <view>
+            <view data-hi="延边" class="li" id="332" bindtap="getCity"> 延边 </view>
+            </view>
+            <view>
+            <view data-hi="宜宾" class="li" id="441" bindtap="getCity"> 宜宾 </view>
+            </view>
+            <view>
+            <view data-hi="伊春" class="li" id="229" bindtap="getCity"> 伊春 </view>
+            </view>
+            <view>
+            <view data-hi="宜昌" class="li" id="268" bindtap="getCity"> 宜昌 </view>
+            </view>
+            <view>
+            <view data-hi="盐城" class="li" id="302" bindtap="getCity"> 盐城 </view>
+            </view>
+            <view>
+            <view data-hi="宜春" class="li" id="320" bindtap="getCity"> 宜春 </view>
+            </view>
+            <view>
+            <view data-hi="银川" class="li" id="360" bindtap="getCity"> 银川 </view>
+            </view>
+            <view>
+            <view data-hi="运城" class="li" id="406" bindtap="getCity"> 运城 </view>
+            </view>
+            <view>
+            <view data-hi="云浮" class="li" id="150" bindtap="getCity"> 云浮 </view>
+            </view>
+            <view>
+            <view data-hi="阳江" class="li" id="148" bindtap="getCity"> 阳江 </view>
+            </view>
+            <view>
+            <view data-hi="营口" class="li" id="346" bindtap="getCity"> 营口 </view>
+            </view>
+            <view>
+            <view data-hi="玉林" class="li" id="168" bindtap="getCity"> 玉林 </view>
+            </view>
+            <view>
+            <view data-hi="榆林" class="li" id="417" bindtap="getCity"> 榆林 </view>
+            </view>
+            <view>
+            <view data-hi="伊犁" class="li" id="500" bindtap="getCity"> 伊犁 </view>
+            </view>
+            <view>
+            <view data-hi="杨凌" class="li" id="562" bindtap="getCity"> 杨凌 </view>
+            </view>
+            <view>
+            <view data-hi="阳泉" class="li" id="404" bindtap="getCity"> 阳泉 </view>
+            </view>
+            <view>
+            <view data-hi="玉树" class="li" id="373" bindtap="getCity"> 玉树 </view>
+            </view>
+            <view>
+            <view data-hi="鹰潭" class="li" id="321" bindtap="getCity"> 鹰潭 </view>
+            </view>
+            <view>
+            <view data-hi="烟台" class="li" id="391" bindtap="getCity"> 烟台 </view>
+            </view>
+            <view>
+            <view data-hi="玉溪" class="li" id="525" bindtap="getCity"> 玉溪 </view>
+            </view>
+            <view>
+            <view data-hi="益阳" class="li" id="278" bindtap="getCity"> 益阳 </view>
+            </view>
+            <view>
+            <view data-hi="岳阳" class="li" id="279" bindtap="getCity"> 岳阳 </view>
+            </view>
+            <view>
+            <view data-hi="永州" class="li" id="280" bindtap="getCity"> 永州 </view>
+            </view>
+            <view>
+            <view data-hi="扬州" class="li" id="303" bindtap="getCity"> 扬州 </view>
+            </view>
+            <view>
+            <view data-hi="Z" class="li" id="Z364" style="background-color:#eee;"> Z </view>
+            </view>
+            <view>
+            <view data-hi="淄博" class="li" id="393" bindtap="getCity"> 淄博 </view>
+            </view>
+            <view>
+            <view data-hi="自贡" class="li" id="442" bindtap="getCity"> 自贡 </view>
+            </view>
+            <view>
+            <view data-hi="珠海" class="li" id="155" bindtap="getCity"> 珠海 </view>
+            </view>
+            <view>
+            <view data-hi="湛江" class="li" id="152" bindtap="getCity"> 湛江 </view>
+            </view>
+            <view>
+            <view data-hi="镇江" class="li" id="307" bindtap="getCity"> 镇江 </view>
+            </view>
+            <view>
+            <view data-hi="张家界" class="li" id="281" bindtap="getCity"> 张家界 </view>
+            </view>
+            <view>
+            <view data-hi="张家口" class="li" id="215" bindtap="getCity"> 张家口 </view>
+            </view>
+            <view>
+            <view data-hi="周口" class="li" id="247" bindtap="getCity"> 周口 </view>
+            </view>
+            <view>
+            <view data-hi="驻马店" class="li" id="248" bindtap="getCity"> 驻马店 </view>
+            </view>
+            <view>
+            <view data-hi="肇庆" class="li" id="153" bindtap="getCity"> 肇庆 </view>
+            </view>
+            <view>
+            <view data-hi="中山" class="li" id="154" bindtap="getCity"> 中山 </view>
+            </view>
+            <view>
+            <view data-hi="舟山" class="li" id="554" bindtap="getCity"> 舟山 </view>
+            </view>
+            <view>
+            <view data-hi="昭通" class="li" id="527" bindtap="getCity"> 昭通 </view>
+            </view>
+            <view>
+            <view data-hi="中卫" class="li" id="362" bindtap="getCity"> 中卫 </view>
+            </view>
+            <view>
+            <view data-hi="张掖" class="li" id="128" bindtap="getCity"> 张掖 </view>
+            </view>
+            <view>
+            <view data-hi="遵义" class="li" id="178" bindtap="getCity"> 遵义 </view>
+            </view>
+            <view>
+            <view data-hi="资阳" class="li" id="443" bindtap="getCity"> 资阳 </view>
+            </view>
+            <view>
+            <view data-hi="漳州" class="li" id="113" bindtap="getCity"> 漳州 </view>
+            </view>
+            <view>
+            <view data-hi="儋州" class="li" id="183" bindtap="getCity"> 儋州 </view>
+            </view>
+            <view>
+            <view data-hi="郑州" class="li" id="230" bindtap="getCity"> 郑州 </view>
+            </view>
+            <view>
+            <view data-hi="株洲" class="li" id="282" bindtap="getCity"> 株洲 </view>
+            </view>
+            <view>
+            <view data-hi="枣庄" class="li" id="392" bindtap="getCity"> 枣庄 </view>
+            </view>
+        </view>
+    </view>
+</view>

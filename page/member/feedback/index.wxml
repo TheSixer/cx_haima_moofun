@@ -1,0 +1,26 @@
+<!--page/member/feedback/index.wxml-->
+<view class="page">
+    <view class="title">
+        <text>请选择您要反馈的问题类型</text>
+    </view>
+    <view class="content">
+        <navigator url="feedbackContent/index?uid={{uid}}&type=3&username={{username}}&accessToken={{accessToken}}" class="content-detail">
+            <view class="get-type">
+                <text>维保预约</text>
+            </view>
+            <image src="/image/arrowright.png"></image>
+        </navigator>
+        <navigator url="feedbackContent/index?uid={{uid}}&type=5&username={{username}}&accessToken={{accessToken}}" class="content-detail">
+            <view class="get-type">
+                <text>车辆信息</text>
+            </view>
+            <image src="/image/arrowright.png"></image>
+        </navigator>
+        <navigator url="feedbackContent/index?uid={{uid}}&type=6&username={{username}}&accessToken={{accessToken}}" class="content-detail last">
+            <view class="get-type">
+                <text>其他</text>
+            </view>
+            <image src="/image/arrowright.png"></image>
+        </navigator>
+    </view>
+</view>

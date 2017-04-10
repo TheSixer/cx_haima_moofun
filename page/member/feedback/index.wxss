@@ -1,0 +1,22 @@
+/* page/member/feedback/index.wxss */
+.title{
+    padding: 20rpx 30rpx;
+}
+.content{
+    padding: 0 30rpx;
+    background-color: #ffffff;
+}
+.content .content-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #EBEBEB;
+}
+.content .content-detail image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.content .last{
+    border-bottom:none; 
+}

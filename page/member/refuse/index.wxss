@@ -1,0 +1,12 @@
+.body{
+    text-align: center;
+}
+.body text{
+    display: block;
+    margin-top: 40rpx;
+}
+.body image{
+    margin-top: 40%;
+    width: 200rpx;
+    height: 200rpx;
+}

@@ -1,0 +1,61 @@
+.body{
+    padding: 30rpx;
+}
+.body .section{
+  border-radius:8rpx; 
+}
+.flex-wrp{
+  height: 150px;
+  display:flex;
+  background-color: #FFFFFF;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+.flex-wrp:last-child{
+  border-bottom: none;
+}
+.flex-item{
+  width: 50%;
+  height: 150px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.flex-item:first-child{
+    border-right: 2rpx solid #F2F2F2;
+}
+.navigator{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.flex-icon{
+    width: 81rpx;
+    height: 81rpx;
+    vertical-align: middle;
+}
+.flex-item-name {
+    margin-top: 30rpx;
+    color:#383838;
+}
+.navigator-hover{
+  background: none;
+}
+.ps {
+  display: inline-block;
+  background: #FF5752;
+  font-size: 10px;
+  padding: 2px 8px;
+  margin-top: 5px;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+.ac_border {
+  width:100%;
+  height:0.5rem;
+}
+.modalCar {
+  width:120px;
+  height:107px;
+}

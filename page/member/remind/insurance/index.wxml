@@ -1,0 +1,39 @@
+<view class="body">
+    <view class="set">
+        <text>车险提醒：</text>
+        <switch bindchange="switchChange" checked="{{status}}" color="#FF9801"/>
+    </view>
+    <view class="set-detail">
+        <view class="set-detail-content">
+            <text>保险公司:</text>
+            <picker bindchange="changeInsurance" value="{{insurance}}" range="{{insuranceList}}">
+                <view class="time">
+                    <text class="left">{{insuranceList[insurance]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content">
+            <text>保险日期:</text>
+            <picker mode="date" value="{{insuranceDate}}" start="{{today}}" end="2210-09-01" bindchange="insuranceDateChange">
+                <view class="time">
+                    <text class="left">{{insuranceDate}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="set-detail-content last">
+            <text>提醒日期:</text>
+            <picker bindchange="changeRemindDays" value="{{remindDays}}" range="{{remindDayArr}}">
+                <view class="time">
+                    <text class="left">{{remindDayArr[remindDays]}}</text>
+                    <image src="/image/arrowright.png"></image>
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="footer">
+    <text>开启提醒，享受便捷车联网生活</text>
+    <button bindtap="submitRemind">完成</button>
+</view>

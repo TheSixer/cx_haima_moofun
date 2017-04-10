@@ -1,0 +1,13 @@
+<view class="body" wx:if="{{!hasActivity}}">
+    <image class="noAct" mode="aspectFit" src="/image/moofun/feedback.png"></image>
+    <text>暂无活动，敬请期待~</text>
+</view>
+<view class="body" wx:if="{{hasActivity}}">
+    <scroll-view scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+        <view wx:for="{{activities}}" wx:key="id">
+            <navigator url="../showPic/index?url={{item.imgUrl}}&name={{item.name}}">
+                <image style="width:750rpx;margin-bottom:40rpx;" mode="widthFix" src="{{item.imgUrl}}"></image>
+            </navigator>
+        </view>
+    </scroll-view>
+</view>

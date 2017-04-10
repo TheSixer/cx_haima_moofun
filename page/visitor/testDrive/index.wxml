@@ -1,0 +1,95 @@
+<view class="page">
+  <view class="body">
+    <view class="choose" bindtap="showS5">
+      <view class="choose-item">
+        <image mode="aspectFit" class="choose-item-tips" src="/image/moofun/Group10.png"></image>
+        <image mode="aspectFit" class="choose-item-car" src="/image/moofun/S5.png"></image>
+      </view>
+    </view>
+    <view class="choose" bindtap="showM3">
+      <view class="choose-item">
+        <image mode="aspectFit" class="choose-item-tips" src="/image/moofun/Group10.png"></image>
+        <image mode="aspectFit" class="choose-item-car" src="/image/moofun/M3.png"></image>
+      </view>
+    </view>
+    <view class="choose" bindtap="showM6">
+      <view class="choose-item">
+        <image mode="aspectFit" class="choose-item-tips" src="/image/moofun/Group10.png"></image>
+        <image mode="aspectFit" class="choose-item-car" src="/image/moofun/M6.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="order" hidden="{{ordering}}">
+       <view class="order-top">
+          <image mode="aspectFit" src="/image/moofun/{{thisCar}}.png"></image>
+          <span class="title">￥</span>
+          <span class="now-price">1</span>
+          <span class="before-price">￥198</span>
+          <image src="/image/close.png" class="close" bindtap="close"></image>
+       </view>
+       <view class="order-middle">
+          <span class="title">提货方式：</span>
+          <span class="box" style="width:25%;">电子兑换券</span>
+          <span class="title">提货门店:</span>
+          <view class="choose-seller" bindtap="showStoreList">
+              <view class="box inline-box address" style="width:78%;">
+                  <span>{{name}}</span>
+                  <span class="detailed-address">{{address}}</span>
+              </view>  
+              <span class="title inline-box arrow" style="margin-left:20rpx;">更改</span>
+              <image src="/image/arrowright.png"class="widget__arrow"></image>
+          </view>  
+          <span style="font-weight:bold; margin-top:30rpx;">购买成功30天内有效</span>        
+       </view> 
+       <!--<view class="order-bottom">
+          <span class="title">数量：</span>
+          <view class="choose-number">
+              <view class="sign">
+                  <image src="/image/minus.png" class="minus" bindtap="minusNumber"></image>
+              </view>
+              <span>{{carNumber}}</span>
+              <view class="sign">
+                  <image src="/image/small-plus.png" class="plus" bindtap="addNumber"></image>
+              </view>
+          </view>
+       </view>-->
+       <!--<button type="button" class="footer" bindtap="orderNow">立即预约试驾</button>  -->
+       <button type="button" class="footer" bindtap="toMoofun">前去Moofun APP 内购买一元试驾</button>  
+  </view>
+  <view class="body-bg" hidden="{{bg}}"></view>
+  <view class="choose-store" hidden="{{storeList}}">
+       <view class="choose-store-title">
+          <span bindtap="back">返回</span>
+          <span class="tips">预约门店</span>
+       </view> 
+     <view class="container">
+        <view class="input">
+          <view bindtap="selectCities">{{present}}  <image mode="aspectFit" src="/image/arrowdown.png"></image></view>
+        </view>
+      </view>
+      <scroll-view class="space" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="{{loading?'':'pullUpLoad'}}">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <view class="choose-store-detail" wx:for="{{list}}" wx:key="dealer_id">
+              <view class="store-item one">
+                <radio color="#338EE3" value="{{item.dealer_id}},{{item.cn_fullname}},{{item.address}}"></radio>
+              </view>
+              <view class="store-item two">
+                  <text>{{item.cn_fullname}}</text>
+                  <image mode="aspectFit" src="{{item.avg}}" class="star"></image>
+                  <text>{{item.address}}</text>
+              </view>
+              <view class="store-item three">
+                <text wx:if="{{present === '附近4S店'}}" style="color:#1F83E0;font-size:12px;">{{item.distance}}</text> 
+              </view>
+          </view>
+        </radio-group>
+      </scroll-view>
+      <view class="has-choose-footer">
+          <view class="has-choose" hidden="{{selected}}">
+              <text>{{selectName}}</text>
+              <text>{{selectAddress}}</text>
+          </view>
+          <button bindtap="comfirm">确定</button>
+      </view>
+  </view>
+</view>

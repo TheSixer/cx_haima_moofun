@@ -1,0 +1,94 @@
+<view class="page">
+  <view class="body">
+    <view class="section" wx:if="{{length == 1}}">
+      <view class="flex-wrp">
+        <view class="flex-item bc_gray" style="flex-direction:column;">
+          <text style="color: #4A4A4A;font-size:11px;">最近获取时间：{{currentdate}}</text>
+          <image mode="aspectFit" class="car" src="/image/moofun/{{car[0].vehicleType}}.png"></image>
+          <!--<view class="flex-bt" style="flex-direction:row;">
+            <view class="flex-it">
+              <block>
+                <navigator class="navigator" url="remind/index">
+                  <text class="flex-item-name">总里程数</text>
+                  <view class="flex-item-name flex-it-bottom">{{car[0].nowMileage}}km</view>
+                </navigator>
+              </block>
+            </view>
+          </view>-->
+        </view>
+        <view class="flex-item" style="height:200px;padding: 40rpx;">
+          <view class="flex-wrp-child">
+            <view class="flex-item-child">
+              <text class="child-left">车型：</text>
+              <text class="child-right" wx:if="{{car[0].vehicleType == ''}}">未填写</text>
+              <text class="child-right" wx:if="{{car[0].vehicleType !== ''}}">{{car[0].vehicleType}}</text>
+            </view>
+            <view class="flex-item-child">
+              <text class="child-left">车辆号码：</text>
+              <text class="child-right" wx:if="{{car[0].plateNo == ''}}">未填写</text>
+              <text class="child-right" wx:if="{{car[0].plateNo !== ''}}">{{car[0].plateNo}}</text>
+            </view>
+            <view class="flex-item-child">
+              <text class="child-left">发动机号：</text>
+              <text class="child-right" wx:if="{{car[0].engineNo == ''}}">未填写</text>
+              <text class="child-right" wx:if="{{car[0].engineNo !== ''}}">{{car[0].engineNo}}</text>
+            </view>
+            <view class="flex-item-child">
+              <text class="child-left">VIN码：</text>
+              <text class="child-right" wx:if="{{car[0].vin == ''}}">未填写</text>
+              <text class="child-right" wx:if="{{car[0].vin !== ''}}">{{car[0].vin}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="section" wx:else>
+      <scroll-view class="scroll-view_H" bindscrolltoupper="pullLeft" lower-threshold="20" upper-threshold="20"  bindscrolltolower="pullRight" scroll-x="{{allowedPull}}" style="width: 100%">
+        <view wx:for="{{car}}" wx:key="carId" class="scroll-view-item_H">
+          <view class="flex-wrp">
+            <view class="flex-item bc_gray" style="flex-direction:column;">
+              <text style="color: #4A4A4A;font-size:11px;">最近获取时间：{{currentdate}}</text>
+              <image mode="aspectFit" class="car" src="/image/moofun/{{item.vehicleType}}.png"></image>
+              <!--<view class="flex-bt" style="flex-direction:row;">
+                <view class="flex-it">
+                  <block>
+                    <navigator class="navigator" url="remind/index">
+                      <text class="flex-item-name">总里程数</text>
+                      <view class="flex-item-name flex-it-bottom">{{item.nowMileage}}km</view>
+                    </navigator>
+                  </block>
+                </view>
+              </view>-->
+            </view>
+            <view class="flex-item" style="height:200px;padding: 40rpx;">
+              <view class="flex-wrp-child">
+                <view class="flex-item-child">
+                  <text class="child-left">车型：</text>
+                  <text class="child-right" wx:if="{{item.vehicleType == ''}}">未填写</text>
+                  <text class="child-right" wx:if="{{item.vehicleType !== ''}}">{{item.vehicleType}}</text>
+                </view>
+                <view class="flex-item-child">
+                  <text class="child-left">车辆号码：</text>
+                  <text class="child-right" wx:if="{{item.plateNo == ''}}">未填写</text>
+                  <text class="child-right" wx:if="{{item.plateNo !== ''}}">{{item.plateNo}}</text>
+                </view>
+                <view class="flex-item-child">
+                  <text class="child-left">发动机号：</text>
+                  <text class="child-right" wx:if="{{item.engineNo == ''}}">未填写</text>
+                  <text class="child-right" wx:if="{{item.engineNo !== ''}}">{{item.engineNo}}</text>
+                </view>
+                <view class="flex-item-child">
+                  <text class="child-left">VIN码：</text>
+                  <text class="child-right" wx:if="{{item.vin == ''}}">未填写</text>
+                  <text class="child-right" wx:if="{{item.vin !== ''}}">{{item.vin}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+  </view>
+</view>

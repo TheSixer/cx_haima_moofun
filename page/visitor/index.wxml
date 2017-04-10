@@ -1,0 +1,71 @@
+<view class="page">
+  <view class="body">
+    <view class="section">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view class="flex-item">
+          <block>
+            <navigator class="navigator" hover-class="navigator-hover" url="testDrive/index">
+              <wx-image class="flex-icon" src="/image/testDrive.png"></wx-image>
+              <text class="flex-item-name">预约试驾</text>
+            </navigator>
+          </block>
+        </view>
+        <view class="flex-item">
+          <block>
+            <navigator class="navigator" hover-class="navigator-hover" url="models/index">
+              <wx-image class="flex-icon" src="/image/models.png"></wx-image>
+              <text class="flex-item-name">车型鉴赏</text>
+            </navigator>
+          </block>
+        </view>
+      </view>
+      <view class="flex-wrp" style="flex-direction:row;">
+        <!--<view class="flex-item">
+          <block>
+            <navigator class="navigator" url="haimaStore/index">
+              <wx-image class="flex-icon" src="/image/haimaStore.png"></wx-image>
+              <text class="flex-item-name">海马商城</text>
+            </navigator>
+          </block>
+        </view>-->
+        <view class="flex-item">
+          <block>
+            <navigator class="navigator" hover-class="navigator-hover" url="nearbyStore/index?carId={{carId}}">
+              <wx-image class="flex-icon" src="/image/nearby.png"></wx-image>
+              <text class="flex-item-name">附近4S店</text>
+            </navigator>
+          </block>
+        </view>
+        <view class="flex-item">
+          <block>
+            <navigator class="navigator" hover-class="navigator-hover" url="moofun/index">
+              <wx-image class="flex-icon" src="/image/moofun.png"></wx-image>
+              <text class="flex-item-name">进入moofun</text>
+            </navigator>
+          </block>
+        </view>
+      </view>
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view class="flex-item" style="border-right:none;">
+          <block>
+            <navigator class="navigator" hover-class="navigator-hover" url="haimaActivity/index">
+              <wx-image mode="aspectFit" class="flex-icon" src="/image/haimaStore.png"></wx-image>
+              <text class="flex-item-name">海马活动</text>
+              <text class="ps">亲，点击查看详情会有惊喜!</text>
+              <image mode="aspectFit" class="ac_border" src="/image/activity_border.png"></image>
+            </navigator>
+          </block>
+        </view>
+        <view class="flex-item">
+          <image class="modalCar" mode="aspectFit" src="/image/modalCar.png"></image>
+        </view>
+        <!--<view class="flex-item">
+          <block>
+            <contact-button type="default-dark" size="27" session-from="weapp"></contact-button>
+            <text class="flex-item-name" style="margin-top: 50rpx;">在线客服</text>
+          </block>
+        </view>-->
+      </view>
+    </view>
+  </view>
+</view>

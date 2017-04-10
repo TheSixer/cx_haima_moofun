@@ -1,0 +1,244 @@
+.storeHeader {
+    padding: 40rpx 30rpx 0;
+    margin-bottom: 20rpx;
+    background: #FFFFFF;
+}
+.info {
+    position:relative;
+    padding-bottom: 30rpx;
+    padding-left:200rpx;
+    border-bottom: 2rpx solid #EBEBEB;
+}
+.storeImg {
+    position:absolute;
+    width:200rpx;
+    height:200rpx;
+    top:0;
+    left:0;
+}
+.storeImg .storePic {
+    width: 100%;
+    height: 100%;
+    border-radius:8rpx;
+}
+.bigImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 36rpx;
+    line-height: 36rpx;
+    font-size: 20rpx;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: .6;
+    background-color: #000;
+}
+.store {
+    display:flex;
+    height:200rpx;
+    flex-direction:column;
+    padding-left:20rpx;
+}
+.store .imgList {
+    padding-top: 25rpx;
+    padding-bottom: 15rpx;
+    vertical-align: bottom;
+}
+.imgList image {
+    width: 160rpx;
+    height: 28rpx;
+    vertical-align: bottom;
+}
+.imgList text {
+    display:inline-block;
+    font-size:20rpx;
+    padding:0 6rpx;
+    color:#FFF;
+    border-radius:5rpx;
+    margin-left:10rpx;
+    height:28rpx;
+    line-height: 28rpx;
+}
+.imgList .blue {
+    background: #338FFD;
+}
+.imgList .orange {
+    background: #ffa500;
+}
+.buyCar {
+    position:absolute;
+    top:0;
+    left:10rpx;
+    width:54rpx;
+    height:60rpx;
+}
+.name {
+    display:flex;
+    padding:0 0 10rpx;
+    font-size:32rpx;
+    font-weight:bold;
+    color:#000;
+}
+.name text {
+    line-height: 48rpx;
+}
+.star {
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    width:160rpx;
+    height:26rpx;
+}
+.address {
+    font-size:24rpx;
+    color:#666;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.connect {
+    display: flex;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 20rpx 0;
+}
+.call {
+    width: 90rpx;
+    height: 50rpx;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    border-right: 2rpx solid #ddd;
+}
+.call image {
+    width: 48rpx;
+    height: 48rpx;
+}
+.location {
+    position: relative;
+    flex-grow: 1;
+    font-size:28rpx;
+    padding-left: 30rpx;
+    padding-right: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.location image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.detail {
+    /*height: 50%;*/
+    /*padding-bottom: 200rpx;*/
+    background-color: #FFFFFF;
+    flex-grow:1;
+    z-index: 99;
+}
+.flex-wrp {
+    display: flex;
+    flex-direction: row;
+    font-size: 24rpx;
+    border-bottom: 2rpx solid #EBEBEB;
+    background-color: #FFFFFF;
+}
+.flex-item {
+    width:50%;
+    height:92rpx;
+    line-height: 92rpx;
+    justify-content:center;
+    align-items:center;
+}
+.flex-center {
+    width:75%;
+    margin:0 auto;
+    height:92rpx;
+    line-height:92rpx;
+    text-align:center;
+}
+.flex-item .active {
+    border-bottom:2rpx solid #FF9801;
+    color:#FF9801;
+}
+.content {
+    height: 100%;
+}
+.page-body {
+    padding-bottom: 200rpx;
+}
+.order {
+    position:fixed;
+    width:100%;
+    height:180rpx;
+    left:0;
+    bottom:0;
+    box-sizing:border-box;
+    background:#FFF;
+    padding:45rpx;
+    border-top: 1rpx solid #EBEBEB;
+    z-index: 100;
+}
+.order button {
+    height: 90rpx;
+    line-height: 90rpx;
+    color: #FFFFFF;
+    border-color: #FF9801;
+    background: #FF9801;
+    /*border-radius: 0;*/
+}
+.order button::after{
+    border: none;
+}
+.comment {
+    display:block;
+    padding:15rpx 30rpx 200rpx;
+}
+.cmt {
+    position:relative;
+    padding:20rpx 30rpx 20rpx 100rpx;
+    border-bottom: 1rpx solid #EBEBEB;
+}
+.cmt:last-child {
+    border-bottom: none;
+}
+.user-head {
+    position:absolute;
+    left:0;
+    top:30rpx;
+    width:80rpx;
+    height:80rpx;
+    border-radius:40rpx;
+}
+.nickname {
+    position:relative;
+    width:100%;
+}
+.nickname image {
+    position:absolute;
+    width:150rpx;
+    height:24rpx;
+    bottom:8rpx;
+    right:0;
+}
+.date {
+    display:block;
+    font-size:20rpx;
+    margin-top:10rpx;
+    color:#666;
+}
+.cmt-content {
+    display:block;
+    margin-top:20rpx;
+    color:#999;
+    font-size:14px;
+}
+.noCmt {
+    text-align:center;
+    font-size:28rpx;
+    color:#666;
+    padding:40rpx 0;
+}

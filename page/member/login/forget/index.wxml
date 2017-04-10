@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <form bindsubmit="login">
+        <view class="page-body-form" style="box-shadow:none;">
+          <view class="page-body-form-item">
+            <image mode="aspectFit" src="/image/page/username.png"></image>
+            <view class="get-code">
+                <input class="page-body-form-value" type="number" maxlength="11" bindinput="bindKeyInput" placeholder="请输入手机号码" placeholder-style="font-size:14px;"></input>
+                <button type="default" class="get-code-in" bindtap="getCode" disabled="{{getCodeBtnDisabled}}">{{codeText}}</button>
+            </view>
+          </view>
+          <view class="page-body-form-item">
+            <image mode="aspectFit" src="/image/page/phone.png"></image>
+            <view class="get-code">
+                <input class="page-body-form-value" type="number" maxlength="4" placeholder="请输入验证码" bindinput="setCode" placeholder-style="font-size:14px;"></input>
+            </view>
+          </view>
+          <view class="page-body-form-item">
+            <image mode="aspectFit" src="/image/page/password.png"></image>
+            <view class="get-code">
+                <input class="page-body-form-value" type="text" minlength="8" maxlength="18" password="true" bindinput="setPassword" placeholder="输入密码" placeholder-style="font-size:14px;"></input>
+            </view>
+          </view>
+          <view class="page-body-form-item">
+            <image mode="aspectFit" src="/image/page/password.png"></image>
+            <view class="get-code">
+                <input class="page-body-form-value" type="text" minlength="8" maxlength="18" password="true" bindinput="setPasswordRe" placeholder="再次输入密码" placeholder-style="font-size:14px;"></input>
+            </view>
+          </view>
+        </view>
+        <view class="page-body-buttons">
+          <button class="page-body-button" formType="submit" bindtap="register">确认修改</button>
+          <!--<view class="footer">
+              <text class="footer-one">注册即表示同意</text><text class="footer-two">《海马汽车用户服务协议》</text>
+          </view>-->
+        </view>
+      </form>
+      <navigator class="footer-tips" hover-class="widget-hover" url="/page/member/login/register/index" >
+            <text>没有账号去</text><text class="found">创建一个</text>
+      </navigator> 
+    </view>
+  </view>
+</view>

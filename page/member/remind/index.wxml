@@ -1,0 +1,77 @@
+<view class="page">
+  <view class="body">
+    <view class="widgets">
+        <!--<view class="title">
+          <image src="/image/page/tips-title.png" style="margin-right:6rpx;"></image>
+          <span>我的提醒</span>
+          <image src="/image/page/tips-title.png" style="margin-left:6rpx;"></image>
+        </view>-->
+
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__hd" style="text-align:right;">
+                <view class="weui-label">当前车辆：</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{carList}}" >
+                  <view class="weui-input" style="display:inline-block;float:left;">{{carList[index]}}</view>
+                  <image src="/image/remind-down.png" style="width:30rpx;height:20rpx;float:left;"></image>
+                </picker>
+              </view>
+            </view>
+          </view>
+
+        </view>
+
+        <view class="box">
+          <navigator class="widget top right" url="carLicence/index?uid={{userInfo.uid}}&accessToken={{userInfo.accessToken}}"
+          style="border-top:none;">
+            <image class="widget_icon" src="/image/page/jia.png"></image>
+            <view class="flex">
+              <text class="widget__name">驾驶证提醒</text>
+              <text class="set" style="color:{{_carLicence}}">{{carLicence}}</text>
+            </view>
+          </navigator>
+          <navigator class="widget top" url="drivingLicence/index?uid={{userInfo.uid}}&carId={{car[index].carId}}&accessToken={{userInfo.accessToken}}" style="border-top:none;">
+            <image class="widget_icon" src="/image/page/che.png"></image>
+            <view class="flex">
+              <text class="widget__name">行驶证提醒</text>
+              <text class="set" style="color:{{_drivingLicence}}">{{drivingLicence}}</text>
+            </view>
+          </navigator>
+        </view>
+        <view class="box">
+          <navigator class="widget right" url="insurance/index?uid={{userInfo.uid}}&carId={{car[index].carId}}&accessToken={{userInfo.accessToken}}">
+            <image class="widget_icon" src="/image/page/xian.png"></image>
+            <view class="flex">
+              <text class="widget__name">车险提醒</text>
+              <text class="set" style="color:{{_insurance}}">{{insurance}}</text>
+            </view>
+          </navigator>
+          <navigator class="widget" url="maintain/index?uid={{userInfo.uid}}&carId={{car[index].carId}}&accessToken={{userInfo.accessToken}}">
+            <image class="widget_icon" src="/image/page/bao.png"></image>
+            <view class="flex">
+              <text class="widget__name">保养提醒</text>
+              <text class="set" style="color:{{maintain == '已开启'?'#FF9801':''}}">{{maintain}}</text>
+            </view>
+          </navigator>
+        </view>
+        <view class="box">
+          <navigator class="widget top right" url="loan/index?uid={{userInfo.uid}}&carId={{car[index].carId}}&accessToken={{userInfo.accessToken}}">
+            <image class="widget_icon" src="/image/page/dai.png"></image>
+            <view class="flex">
+              <text class="widget__name">车贷提醒</text>
+              <text class="set" style="color:{{loan == '已开启'?'#FF9801':''}}">{{loan}}</text>
+            </view>
+          </navigator>
+          <navigator class="widget top" url="" hover-class="none">
+            <!--<image class="widget_icon" src="/image/page/all.png"></image>
+            <view class="flex">
+              <text class="widget__name">查看全部</text>
+            </view>-->
+          </navigator>
+        </view>
+      </view>
+  </view>
+</view>

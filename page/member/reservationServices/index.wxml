@@ -1,0 +1,145 @@
+<view class="body" hidden="{{selectStore}}">
+    <view class="body-top">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{items}}" wx:key="value">
+          <view class="choose-type">
+            <view class="choose-type-left">
+              <image src="{{item.src}}"></image>
+              <text>{{item.name}}</text>
+            </view>
+            <checkbox id="{{item.value}}" color="#FF9801" value="{{item.name}}" checked="{{item.checked}}"/>
+          </view>
+          <!--<view class="choose-type">
+            <view class="choose-type-left">
+              <image src="/image/page/oil.png"></image>
+              <text>保养</text>
+            </view>
+            <checkbox color="#338EE3" value="{{item.name}}" checked="{{item.checked}}"/>
+          </view>-->
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="body-middle">
+      <view>
+        <text class="title">预约门店(可更换):</text>
+      </view>
+      <view class="adit" bindtap="toOrderStore">
+        <view class="adit-left">
+          <text>{{name}}</text>
+          <text>{{address}}</text>
+        </view>
+        <view class="adit-right">
+          <text>更改</text>
+          <image src="/image/arrowright.png"></image>
+        </view>
+      </view>
+      <view class="adit last">
+          <view class="adit-left left-title">
+            <text>上门取车：</text>
+          </view>
+          <view class="adit-right">
+            <switch bindchange="switchChange" checked="{{pick}}" color="#FF9801"/>
+          </view>
+       </view>
+       <view hidden="{{flag}}">
+        <view class="adit last">
+          <view class="adit-left link-left left-title">
+            <text>取车时间：</text>
+          </view>
+          <view class="adit-right link-right">
+            <picker mode="date" value="{{date1}}" start="{{now}}" end="2200-12-30" bindchange="bindDateChange1" style="width: 55%;">
+              <view class="adit-right-last">
+                <view style="margin-right:6rpx;">{{date1}}</view>
+                <image src="/image/arrowright.png"></image>
+              </view>
+            </picker>
+          </view>
+        </view>
+       </view>
+       <view class="adit-special" hidden="{{flag}}">
+            <view class="wrap" style="border-top:1px solid #F2F2F2;">
+              <view class="adit-special-left">
+                <text>取车地址:</text>
+              </view>
+              <view class="adit-special-right" style="width: 70%;text-align: right;">
+                <input placeholder="输入取车地址"  bindinput="setAddress" style="width: 100%;"/>
+              </view>
+            </view>
+          </view>
+    </view>
+    <view class="body-middle">
+      <view class="adit" wx:if="{{!flag}}">
+        <view class="adit-left link-left left-title">
+          <text>联系人：</text>
+        </view>
+        <view class="adit-right link-right">
+          <input type="text" placeholder="输入联系人" bindinput="setName"/>
+        </view>
+      </view>
+      <view class="adit" wx:if="{{flag}}">
+          <view class="adit-left link-left left-title">
+            <text>预约时间：</text>
+          </view>
+          <view class="adit-right link-right">
+            <picker mode="date" value="{{date2}}" start="{{now}}" end="2200-12-30" bindchange="bindDateChange2" style="width: 55%;">
+              <view class="adit-right-last">
+                <view style="margin-right:6rpx;">{{date2}}</view>
+                <image src="/image/arrowright.png"></image>
+              </view>
+            </picker>
+          </view>
+      </view>
+      <view class="adit last">
+          <view class="adit-left link-left">
+            <text>联系电话：</text>
+          </view>
+          <view class="adit-right link-right">
+            <input type="text" placeholder="输入手机号码" bindinput="setPhone"/>
+          </view>
+       </view>
+    </view>
+    <view class="body-bottom">
+          <button bindtap="checkInfo">立即预约</button>
+    </view>
+</view>
+
+<view class="page" hidden="{{yuyue}}">
+  <view class="body">
+    <view class="sort">
+      <view class="sort-button">
+        <button class="{{order == 0?'selected':''}}" bindtap="distance">离我最近</button>
+      </view>
+      <view class="sort-button">
+        <button class="{{order == 1?'selected':''}}" bindtap="amount">人气最高</button>
+      </view>
+      <view class="sort-button">
+        <button class="{{order == 2?'selected':''}}" bindtap="comment">评价最好</button>
+      </view>
+    </view>
+    
+    <scroll-view class="widgets" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <view wx:for="{{list}}" wx:key="dealer_id">
+          <view class="widget" hover-class="none">
+            <radio color="#338EE3" value="{{item.dealer_id}},{{item.support_pick}},{{item.cn_fullname}},{{item.address}}" class="choose-store" checked="{{item.checked}}"></radio>
+            <image class="widget_icon" src="/image/page/store.png"></image>
+            <image wx:if="{{item.buyCar}}" class="buyCar" mode="aspectFit" src="/image/page/buyCar.png"></image>
+            <view class="widget_info">
+              <view class="name">
+                <text>{{item.cn_fullname}}</text>
+                <view class="km">
+                  <text>{{item.distance}}</text>
+                </view>
+              </view>
+              <view class="imgList">
+                <image mode="aspectFit" src="{{item.avg}}"></image> <text wx:if="{{item.support_pick}}" class="blue">上门取车</text> <text wx:if="{{item.gone}}" class="orange">上次去过的店</text>
+              </view>
+              <text class="address">{{item.address}}</text>
+            </view>
+            <view class="widget__line"></view>
+          </view>
+        </view>
+      </radio-group>
+    </scroll-view >
+  </view>
+</view>

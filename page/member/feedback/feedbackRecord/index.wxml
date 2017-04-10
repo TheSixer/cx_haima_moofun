@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="body">
+    <!--<view class="section" wx:if="{{ {{amount}} = 0 }}">
+      <image src="/image/moofun/feedback.png"></image>
+      <text>您当前没有反馈记录哦哦，快给我们提个建议吧~</text>
+    </view>-->
+    <scroll-view class="widgets" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+        <view class="container" wx:for="{{list}}" wx:key="id">
+            <view class="content">
+                <view class="content-top">
+                    <span>反馈内容：</span><span>{{item.title.title}}</span>
+                </view>
+                <view class="content-bottom">
+                    <span>反馈时间：</span><span>{{item.title.createTime}}</span>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+  </view>
+</view>

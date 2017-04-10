@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="selectService">
+      <button bindtap="park" disabled="{{loading}}" checked="true" class="nav-but {{park?'selected':''}}">停车</button>
+      <button bindtap="wash" disabled="{{loading}}" class="nav-but {{wash?'selected':''}}">洗车</button>
+      <button bindtap="gas" disabled="{{loading}}" class="nav-but {{gas?'selected':''}}">加油</button>
+    </view>
+
+    <view class="markerInfo" hidden="{{hide}}">
+      <view class="goBtn" bindtap="{{noMarker?'':'navigation'}}">
+        <image src="/image/go.png"></image>
+      </view>
+      <view class="info">
+        <view class="title">{{title}}</view>
+        <view class="address">{{address}}</view>
+      </view>
+    </view>
+
+    <view class="section section_gap">
+      <map id="map" show-location longitude="{{longitude}}" latitude="{{latitude}}" scale="16" 
+    markers="{{markers}}" bindmarkertap="markertap" bindregionchange="bindregionchange" bindtap="bindtap" style="width: 100%; height: {{height}}px;"></map>
+    </view>
+  </view>
+</view>

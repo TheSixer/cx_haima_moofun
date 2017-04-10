@@ -1,0 +1,77 @@
+/* app/login/index.wxss */
+.get-code {
+    height: 1.7rem;
+     font-size: 14px;
+    width: 40%;
+    background-color: #FF9801;
+    color: #FFFFFF;
+    line-height: 1.7rem;
+}
+.get-code[disabled]{
+    background-color: #B7B7B7 !important;
+    color: #FFFFFF !important;
+}
+.page-body-wrapper {
+    margin-top: 30px;
+}
+.page-body-form {
+    margin: 20px 10px;
+    border-radius: 6px;
+}
+.page-body-button {
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #fff;
+    border-radius:2px;
+    background-color:#FF9801;
+}
+.page-body-button[disabled] {
+    background-color: #FF9801 !important;
+    color: #FFFFFF !important;
+}
+.page-body-form-item{
+    align-items: center;
+}
+.page-body-form-item input{
+    margin-left: 10rpx;
+}
+.page-body-form-item image{
+    width:35rpx;
+    height:32rpx;
+}
+.choose-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FF9801;
+    font-size: 26rpx;
+    margin: 0 40rpx;
+}
+
+.footer {
+    text-align: center;
+}
+.footer text{
+    font-size:12px;
+}
+.footer .footer-one{
+    color: #9D9D9D;
+}
+.footer .footer-two{
+    color: #FF9801;
+}
+.choose-type1{
+    justify-content: flex-end;
+}
+.footer-tips{
+    display: block;
+    position: absolute;
+    bottom: 50rpx;
+    text-align: center;
+    font-size:16px;
+    color:#9B9B9B;
+    width:100%;
+}
+.footer-tips .found{
+    color: #FF9801;
+}

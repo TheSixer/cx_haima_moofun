@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <form>
+        <view class="page-body-form" style="box-shadow:none;" hidden="{{flag1}}">
+          <view class="page-body-form-item">
+            <!--<text class="page-body-form-key">用户名：</text>-->
+            <image mode="aspectFit" src="/image/page/username.png"></image>
+            <input class="page-body-form-value" type="number" maxlength="11" placeholder="请输入手机号码" bindinput="setPhone" placeholder-style="font-size:14px;"></input>
+            <button type="default" class="get-code" bindtap="getCode" disabled="{{getCodeBtnDisabled}}">{{codeText}}</button>
+          </view>
+          <view class="page-body-form-item" style="border-bottom: none;">
+            <!--<text class="page-body-form-key">密码：</text>-->
+            <image mode="aspectFit" src="/image/page/phone.png" style="width:23rpx;"></image>
+            <input class="page-body-form-value" type="number" maxlength="4" placeholder="请输入验证码" bindinput="coding" style="margin-left:19rpx;" placeholder-style="font-size:14px;"></input>
+          </view>
+        </view>
+        <view class="page-body-buttons" hidden="{{flag1}}">
+          <view class="choose-type choose-type1">
+              <text style="color:#9B9B9B;" bindtap="switch1">切换至账号密码登录</text>
+          </view>
+          <button class="page-body-button" bindtap="login">验证并登录</button>
+          <view class="footer">
+              <text class="footer-one">验证即表示同意</text><text class="footer-one">《海马汽车用户服务协议》</text>
+          </view>
+        </view>
+
+        <view class="page-body-form" style="box-shadow:none;" hidden="{{flag2}}">
+          <view class="page-body-form-item">
+            <image mode="aspectFit" src="/image/page/username.png"></image>
+            <input class="page-body-form-value" type="number" maxlength="11" placeholder="请输入账号" bindinput="setPhone2" placeholder-style="font-size:14px;"></input>
+          </view>
+          <view class="page-body-form-item" style="border-bottom: none;">
+            <image mode="aspectFit" src="/image/page/password.png" style="width:23rpx;"></image>
+            <input class="page-body-form-value" type="text" password="true" maxlength="18" placeholder="请输入密码" bindinput="setPassword" style="margin-left:19rpx;" placeholder-style="font-size:14px;"></input>
+            <navigator hover-class="widget-hover" url="forget/index" >
+                  <text style="color:#FF9801;font-size:26rpx">忘记密码？</text>
+            </navigator>
+          </view>
+        </view>
+        <view class="page-body-buttons" hidden="{{flag2}}">
+          <view class="choose-type">
+              <!--<checkbox color="#338EE3">记住密码</checkbox>-->
+              <text style="color:#9B9B9B;" bindtap="switch2">切换至手机验证码登录</text>
+          </view>
+          <button class="page-body-button" bindtap="submit">登 录</button>
+          <view class="footer">
+              <text class="footer-one">登录即表示同意</text><text class="footer-one">《海马汽车用户服务协议》</text>
+          </view>
+        </view>
+      </form>
+      <view  class="footer-tips">
+          <navigator hover-class="widget-hover" url="register/index" >
+            <text>没有账号？</text><text class="found">立即注册</text>
+          </navigator>
+      </view>
+    </view>
+  </view>
+</view>

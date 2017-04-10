@@ -1,0 +1,24 @@
+<!--page/member/myIntegral/integralRecord/index.wxml-->
+<view class="page">
+    <view class="title">
+        <text>积分记录</text>
+    </view>
+    
+    <view wx:if="{{empty}}" class="empty">您还有获取过积分哦~</view>
+
+    <view wx:if="{{!empty}}" class="content">
+        <scroll-view class="widgets" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+            <view wx:for="{{array}}" wx:key="id">
+                <view class="content-detail">
+                    <view class="get-type">
+                        <text>{{item.sourceDescription}}</text>
+                        <text style="color:#B0B0B0;">{{item.createTime}}</text>
+                    </view>
+                    <view class="get-score">
+                        <text style="{{item.status == '0'?'':'color:#B0B0B0'}}">{{item.status == '0'?'+':'-'}}{{item.score}}</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,151 @@
+.car-info{
+    display: flex;
+    align-items: center;
+    padding: 20rpx 20rpx;
+    background-color: #ffffff;
+}
+.car-info image{
+    width:236rpx;
+    height:130rpx;
+    margin-right:40rpx;
+}
+.car-info .car-type text{
+    font-weight: bold;
+}
+.car-info .repair-number text{
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.choose-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66rpx;
+    background-color: #ffffff;
+}
+
+.choose-info .first,.choose-info .two{
+    width: 50%;
+    text-align: center;
+    line-height: 80rpx;
+    border-right:1px solid #EBEBEB; 
+    border-bottom: 1px solid #FF9801;
+    color: #FF9801;
+}
+.choose-info .borderFirst{
+    width: 50%;
+    text-align: center;
+    line-height: 80rpx;
+    border-right:1px solid #EBEBEB;  
+}
+.choose-info .borderTwo{
+    width: 50%;
+    text-align: center;
+    line-height: 80rpx;
+}
+.repair-info{
+    margin-top: 10rpx;
+}
+.repair-info .time,.order-info .time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    background-color: #F8F8F8;
+    font-size:12px;
+    color: #9B9B9B;
+}
+.repair-info .time image,.order-info .time image{
+    width: 44rpx;
+    height: 44rpx;
+    margin-right: 10rpx;
+}
+.repair-info .time .img,.order-info .time .img{
+    display: flex;
+    align-items: center;
+}
+.price {
+    padding: 20rpx;
+    background-color: #ffffff;
+}
+.price .shop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30rpx;
+
+}
+.price .shop .shop-name{
+    color: #9B9B9B;
+}
+.price .shop .shop-price{
+    font-weight: bold;
+    color: #EB3434;
+}
+.content {
+    display: flex;
+    /*justify-content: space-between;*/
+    margin-top: 30rpx;
+    width: 100%;
+    font-size: 14px;
+}
+/*.content .content-item2{
+
+}*/
+.content .content-item1{
+    width: 15%;
+}
+.content .content-item2{
+    width: 75%;
+    /*white-space: nowrap;*/
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+}
+/*.content .content-item2 text{  
+    white-space: nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;  
+}*/
+.content .content-item3{
+    position: relative;
+    width: 10%;
+}
+.content .content-item3 image{
+    position: absolute;
+    top: 8rpx;
+    right: 0;
+    width:40rpx;
+    height:20rpx;
+}
+.no-record{
+    text-align: center;
+}
+.no-record image{
+    width:400rpx;
+    height:300rpx;
+    margin-top:200rpx;
+}
+.no-record text{
+    display: block;
+    margin-top: 40rpx;
+    font-size: 12px;
+    color: #B1B1B1;
+}
+.order-info{
+    background-color: #ffffff;
+}
+.order-info .store-name{
+    padding: 28rpx 32rpx;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order-info .address-detail{
+    display: flex;
+    align-content: center;
+    padding: 28rpx 32rpx;
+    font-size: 14px;
+}
+.order-info .address-detail .address-content{
+    font-size: 14px;
+    color: #383838;
+}

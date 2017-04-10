@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "page/member/index",
+    "page/member/login/index",
+    "page/member/login/forget/index",
+    "page/member/login/register/index",
+    "page/member/carInfo/index",
+    "page/member/myIntegral/index",
+    "page/member/myIntegral/integralRecord/index",
+    "page/member/remind/index",
+    "page/member/remind/carLicence/index",
+    "page/member/remind/drivingLicence/index",
+    "page/member/remind/maintain/index",
+    "page/member/remind/insurance/index",
+    "page/member/remind/loan/index",
+    "page/member/vehicleServices/index",
+    "page/member/refuse/index",
+    "page/member/reservationServices/index",
+    "page/member/reservationServicesRecord/index",
+    "page/member/orderRecord/index",
+    "page/member/privilege/index",
+    "page/member/feedback/index",
+    "page/member/feedback/feedbackRecord/index",
+    "page/member/feedback/feedbackContent/index",
+    "page/member/hotline/index",
+    
+
+    "page/visitor/index",
+    "page/visitor/testDrive/index",
+    "page/visitor/models/index",
+    "page/visitor/haimaStore/index",
+    "page/visitor/nearbyStore/index",
+    "page/visitor/nearbyStore/storeDetail/index",
+    "page/visitor/moofun/index",
+    "page/visitor/selectCities/index",
+    "page/visitor/haimaActivity/index",
+    "page/visitor/showPic/index",
+    "page/visitor/showModel/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "MOOFUN",
+    "navigationBarBackgroundColor": "#FF9801",
+    "backgroundColor": "#fbf9fe",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#FF9801",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [{
+      "pagePath": "page/member/index",
+      "iconPath": "image/user.png",
+      "selectedIconPath": "image/cuser.png",
+      "text": "海马服务"
+    }, {
+      "pagePath": "page/visitor/index",
+      "iconPath": "image/zuser.png",
+      "selectedIconPath": "image/czuser.png",
+      "text": "购车指南"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
